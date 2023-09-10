@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.blogdetails {
+  float: left;
+  width: 100%;
+  background-color: white;
+  padding-top: 60px;
+}
+
+.blogdetails .blogdetailwrap {
+  float: left;
+  width: 100%;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg:hover .blogimg span {
+  background-color: #000000;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg .blogimg {
+  position: relative;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg .blogimg img {
+  width: 100%;
+  height: auto;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg .blogimg span {
+  width: 120px;
+  height: 41px;
+  position: absolute;
+  bottom: 8%;
+  text-align: left;
+  left: 0;
+  right: 0;
+  background-color: #e97800;
+  text-align: center;
+}
+
+.blogdetails .blogdetailwrap .blogdetailmainimg .blogimg span a {
+  padding: 6px 20px 5px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.blogdetails .blogdetailmiddle {
+  float: left;
+  width: 100%;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlheading h5 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlstatistic {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0px;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlstatistic li {
+  margin-right: 28px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlstatistic li a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+  text-decoration: none;
+}
+
+.blogdetails .blogdetailmiddle .blogdtlstatistic li i {
+  color: #e97800;
+  margin-right: 9px;
+}
+
+.blogdetails .blogdetailmiddle p {
+  color: #777777;
+  font-size: 16px;
+  margin-bottom: 21px;
+  font-weight: lighter;
+}
+
+.blogdetails .blogdetailmiddle .middlep {
+  background-color: #f1f1f1;
+  float: left;
+  width: 100%;
+  padding: 34px 34px 36px;
+  border-left: 6px solid;
+  text-align: center;
+  margin: 0px 0 23px 0;
+}
+
+.blogdetails .blogdetailmiddle .middlep p {
+  font-size: 18px;
+  font-style: italic;
+  position: relative;
+}
+
+.blogdetails .blogdetailmiddle .pmargin {
+  margin-bottom: 25px;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages {
+  float: left;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs {
+  position: relative;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs:hover span {
+  opacity: 0.7;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs:hover span a {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs img {
+  width: 100%;
+  height: auto;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs span {
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+  position: absolute;
+  opacity: 0;
+  background-color: #e97800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.blogdetails .blogdetailmiddle .blogextraimages .extraimgs span a {
+  color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.blogdetails .blogauthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 20px 15px 13px 20px;
+  margin-bottom: 40px;
+}
+
+.blogdetails .blogauthor .authorimg {
+  margin: 0px;
+  width: 128px;
+}
+
+.blogdetails .blogauthor .authorimg img {
+  width: 128px;
+  height: auto;
+}
+
+.blogdetails .blogauthor .blogaboutauthor {
+  float: none;
+  overflow: hidden;
+  padding: 0px 20px;
+  text-align: left;
+}
+
+.blogdetails .blogauthor .blogaboutauthor h6 {
+  margin: -3px 0 9px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.blogdetails .blogauthor .blogaboutauthor h6 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blogdetails .blogauthor .blogaboutauthor p {
+  color: #777777;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.blogdetails .blogauthor .blogaboutauthor .blogauthorsocial {
+  float: right;
+  text-align: right;
+}
+
+.blogdetails .blogauthor .blogaboutauthor .blogauthorsocial li {
+  float: left;
+  margin-left: 20px;
+}
+
+.blogdetails .blogauthor .blogaboutauthor .blogauthorsocial li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #666;
+}
+
+.blogdetails .blogauthor .blogaboutauthor .blogauthorsocial li a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #e79800;
+}
+
+.blogdetails .sectioncomment {
+  float: left;
+  width: 100%;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+.blogdetails .sectioncomment .commentheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.blogdetails .sectioncomment .commentheading h5 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.blogdetails .sectioncomment .commentul {
+  float: left;
+  width: 100%;
+}
+
+.blogdetails .sectioncomment .commentul li {
+  float: left;
+  width: 100%;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 30px 0 30px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentimg {
+  width: 108px;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain {
+  float: none;
+  overflow: hidden;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead {
+  float: left;
+  width: 100%;
+  margin-bottom: 9px;
+  margin-top: -4px;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentabout {
+  float: left;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentabout a {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+  display: inline-block;
+  font-weight: bold;
+  color: #333333;
+  font-family: 'Roboto Slab', serif;
+  text-decoration: none;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentabout span {
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 20px;
+  border-left: 1px solid #e7e7e7;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentreply {
+  float: right;
+  font-size: 14px;
+  font-weight: normal;
+  color: #999999;
+  text-decoration: none;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentreply:hover {
+  color: #e97800;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain .commentmainhead .commentreply i {
+  margin-right: 10px;
+}
+
+.blogdetails .sectioncomment .commentul li .commentcard .commentmain p {
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+.blogdetails .sectioncomment .commentul li .replyul {
+  float: left;
+  width: 100%;
+  padding-left: 50px;
+}
+
+.blogdetails .blogform {
+  float: left;
+  width: 100%;
+  padding: 30px 0px 70px;
+}
+
+.blogdetails .blogform .blogformheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.blogdetails .blogform .blogformheading h5 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.blogdetails .blogform form {
+  float: left;
+  width: 100%;
+}
+
+    .blogdetails .blogform form input {
+        float: left;
+        width: 100%;
+        padding: 10px 15px 13px;
+        font-size: 16px;
+        color: #000000 !important;
+        border: 1px solid #d8d8d8;
+        margin-bottom: 30px;
+        outline: none;
+    }
+
+.blogdetails .blogform form input::-moz-placeholder {
+  color: #bcbcbc;
+}
+
+.blogdetails .blogform form input:focus {
+  outline: 1px solid #e97800;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+    .blogdetails .blogform form textarea {
+        float: left;
+        width: 100%;
+        min-height: 170px;
+        padding: 10px 15px 13px;
+        font-size: 16px;
+        color: #000000 !important;
+        border: 1px solid #d8d8d8;
+        margin-bottom: 30px;
+        outline: none;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+    }
+
+.blogdetails .blogform form textarea:focus {
+  outline: 1px solid #e97800;
+}
+
+.blogdetails .blogform form textarea::-moz-placeholder {
+  color: #bcbcbc;
+}
+
+.blogdetails .blogform form input {
+  padding: 8px 30px;
+  text-transform: uppercase;
+  color: #fff;
+  float: left;
+  font-weight: bold;
+  border: 0px;
+  background-color: #e97800;
+}
+
+    .blogdetails .blogform form input:hover {
+        background-color: black;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+/*# sourceMappingURL=blogpostdetail.css.map */

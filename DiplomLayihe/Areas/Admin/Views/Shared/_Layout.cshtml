@@ -1,0 +1,449 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Admin</title>
+    
+    <link rel="icon" href="~/admin/assets/images/favicon.ico" type="image/x-icon">
+    <!-- simplebar CSS-->
+
+    <style>
+        .createbtn {
+            width: auto;
+            height: auto;
+            border: 0px solid green;
+            background-color: transparent;
+            font-weight: normal;
+            padding: 6px 20px 6px;
+        }
+
+            .createbtn:hover {
+                transition: 0.35s;
+                background-color: green;
+            }
+
+
+        .editbtn {
+            width: auto;
+            height: auto;
+            border: 0px solid yellow;
+            background-color: transparent;
+            font-weight: normal;
+            padding: 6px 20px 6px;
+        }
+
+
+            .editbtn:hover {
+                transition: 0.35s;
+                background-color: darkgoldenrod;
+            }
+
+
+        .detailbtn {
+            width: auto;
+            height: auto;
+            border: 0px solid blue;
+            background-color: transparent;
+            font-weight: normal;
+            padding: 6px 20px 6px;
+        }
+
+            .detailbtn:hover {
+                transition: 0.35s;
+                background-color: blue;
+            }
+
+        .deletebtn {
+            width: auto;
+            height: auto;
+            border: 0px solid red;
+            background-color: transparent;
+            font-weight: normal;
+            padding: 6px 20px 6px;
+            cursor: pointer;
+        }
+
+            .deletebtn:hover {
+                transition: 0.35s;
+                background-color: red;
+            }
+        .tags {
+            min-height: 170px;
+        }
+
+            .tags > option {
+                background-color: white;
+            }
+    </style>
+    <link href="~/admin/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <!-- Bootstrap core CSS-->
+    <link href="~/admin/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- animate CSS-->
+    <link href="~/admin/assets/css/animate.css" rel="stylesheet" type="text/css" />
+    <!-- Icons CSS-->
+    <link href="~/admin/assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <!-- Sidebar CSS-->
+    <link href="~/admin/assets/css/sidebar-menu.css" rel="stylesheet" />
+    <!-- Custom Style-->
+    <link href="~/admin/assets/css/app-style.css" rel="stylesheet" />
+
+
+
+    @RenderSection("css", required: false)
+
+    <link href="~/admin/assets/libs/toastr.js/toastr.min.css" rel="stylesheet" />
+    <link href="~/admin/assets/icon/icofont/css/icofont.min.css" rel="stylesheet" />
+    </head>
+
+<body class="bg-theme bg-theme2">
+
+    
+    <div id="wrapper">
+
+        <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
+            <div class="brand-logo">
+                <a asp-area="admin" asp-controller="dashboard" asp-action="index">
+                    <img src="~/admin/assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
+                    <h5 class="logo-text">Dashtreme Admin</h5>
+                </a>
+            </div>
+            <ul class="sidebar-menu do-nicescrol">
+                <li class="sidebar-header">MAIN NAVIGATION</li>
+                <li>
+                    <a asp-area="admin" asp-controller="dashboard" asp-action="index">
+                        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
+                    </a>
+                </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="coursecategories" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Courses</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="teachers" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Teachers_for_site_</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="planexplanation" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Plan_Explanation</span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="planandpricing" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Plan_And_Pricing</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="lastnewsandevents" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Last_News_And_Events</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="eventspeakers" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Event_Speakers</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="eventgallery" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Event_Gallery</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="contact" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Contact_Us</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="blogpost" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Blog</span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="blogpostcomments" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.blogpostcomments</span>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a asp-area="admin" asp-controller="user" asp-action="index">
+                            <i class="zmdi zmdi-grid"></i>
+                            <span>@Sidebar.Users</span>
+                        </a>
+                    </li>
+                
+
+            </ul>
+
+        </div>
+
+        <header class="topbar-nav">
+            <nav class="navbar navbar-expand fixed-top">
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link toggle-menu" href="javascript:void();">
+                            <i class="icon-menu menu-icon"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form style=" display: flex;" method="get" asp-action="index" class="search-bar">
+                            <input type="search" value="@ViewData["Getsearch"]" name="search" class="form-control" placeholder="@Sidebar.Enter_keywords">
+                            <button style="position: absolute; background-color: transparent; border: none; right: 10px; top: 5px; color: white; font-size:16px;" value=""><i class="icon-magnifier"></i></button>
+                        </form>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav align-items-center right-nav-link">
+                    <li class="nav-item dropdown-lg">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+                            <i class="fa fa-envelope-open-o"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown-lg">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+                            <i class="fa fa-bell-o"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item language">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();"><i class="fa fa-flag"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i><a style="cursor: pointer;" data-lang="en">@Sidebar.English</a></li>
+                            <li class="dropdown-item"> <i class="flag-icon flag-icon-az mr-2"></i><a style="cursor: pointer;" data-lang="az">@Sidebar.Azerbaijan</a></li>
+                            <li class="dropdown-item"> <i class="flag-icon flag-icon-ru mr-2"></i><a style="cursor: pointer;" data-lang="ru">@Sidebar.Russian</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+                            <span class="user-profile"><img src="~/photouploads/images/@ViewBag.User.ProfileImg" class="img-circle"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li class="dropdown-item user-details">
+                                <a href="javaScript:void();">
+                                    <div class="media">
+                                        <div class="avatar"><img class="align-self-start mr-3" src="~/photouploads/images/@ViewBag.User.ProfileImg"></div>
+                                        <div class="media-body">
+
+                                            <h6 class="mt-2 user-title">@ViewBag.User.UserName</h6>
+                                            <p class="user-subtitle">@ViewBag.User.Email</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-settings mr-2"></i><a asp-route-id="@ViewBag.User.Id" asp-area="admin" asp-controller="setting" asp-action="index">@Sidebar.Setting</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li class="dropdown-item"><i class="icon-power mr-2"></i><a asp-controller="account" asp-action="signout">@Sidebar.Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="clearfix"></div>
+
+        <div class="content-wrapper">
+            <div class="container-fluid">
+
+                @RenderBody()
+
+            </div>
+
+
+        </div>
+
+        <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
+
+
+        <div class="right-sidebar">
+            <div class="switcher-icon">
+                <i class="zmdi zmdi-settings zmdi-hc-spin"></i>
+            </div>
+            <div class="right-sidebar-content">
+
+                <p class="mb-0">Gaussion Texture</p>
+                <hr>
+
+                <ul class="switcher">
+                    <li id="theme1"></li>
+                    <li id="theme2"></li>
+                    <li id="theme3"></li>
+                    <li id="theme4"></li>
+                    <li id="theme5"></li>
+                    <li id="theme6"></li>
+                </ul>
+
+                <p class="mb-0">Gradient Background</p>
+                <hr>
+
+                <ul class="switcher">
+                    <li id="theme7"></li>
+                    <li id="theme8"></li>
+                    <li id="theme9"></li>
+                    <li id="theme10"></li>
+                    <li id="theme11"></li>
+                    <li id="theme12"></li>
+                    <li id="theme13"></li>
+                    <li id="theme14"></li>
+                    <li id="theme15"></li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </div><!--End wrapper-->
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/admin/assets/js/jquery.min.js"></script>
+    <script src="~/admin/assets/js/popper.min.js"></script>
+    <script src="~/admin/assets/js/bootstrap.min.js"></script>
+
+    <!-- simplebar js -->
+    <script src="~/admin/assets/plugins/simplebar/js/simplebar.js"></script>
+    <!-- sidebar-menu js -->
+    <script src="~/admin/assets/js/sidebar-menu.js"></script>
+    <!-- loader scripts -->
+    <script src="~/admin/assets/js/jquery.loading-indicator.js"></script>
+    <!-- Custom scripts -->
+    <script src="~/admin/assets/js/app-script.js"></script>
+    <!-- Chart js -->
+
+    <script src="~/admin/assets/plugins/Chart.js/Chart.min.js"></script>
+
+    <!-- Ajax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Index js -->
+    <script src="~/admin/assets/js/index.js"></script>
+
+
+    @RenderSection("js", required: false)
+    <script src="~/admin/assets/js/customsize.js"></script>
+    <script src="~/admin/assets/libs/sweetalert/sweetalert.min.js"></script>
+    <script src="~/admin/assets/libs/toastr.js/toastr.min.js"></script>
+
+
+    <script>
+
+        function readFile(input) {
+            let file = input.files[0];
+
+            let reader = new FileReader();
+
+            reader.onload = function () {
+                console.log(reader.result);
+
+                $('#file-viewer').css('background-image', `url(${reader.result})`);
+            };
+
+            reader.onerror = function () {
+                console.log(reader.error);
+            };
+
+            reader.readAsDataURL(file);
+
+        }
+
+
+
+
+
+        $(document).ready(function () {
+            const lang = `@Context.GetCurrentCulture()`;
+
+            const selectedLang = $(`[data-lang = "${lang}"]`).text()
+
+            $(`[data-lang-viewer="language"]`).text(selectedLang)
+
+            $('[data-lang]').click(function (e) {
+                e.preventDefault();
+
+                var path = `${window.location.pathname}${window.location.search}`;
+
+                var selectedLang = $(e.currentTarget).data('lang');
+
+                var result = /\/(en|az|ru)?\/?(.*)?/.exec(path);
+
+                if (result != null && result[2] != undefined) {
+                    path = `/${selectedLang}/${result[2]}`;
+                }
+                else if (result != null) {
+                    path = `/${selectedLang}`;
+                }
+
+                window.location.href = path;
+
+            })
+
+        })
+
+
+
+
+
+
+
+
+
+
+        function removeEntity(ev, entityId, name) {
+            swal({
+                title: "Dəqiq brad ?",
+                text: `${name} adlı qeyd silinəcək.`,
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        $.ajax({
+                            url: `@Url.Action("Delete")/${entityId}`,
+                            type: 'post',
+                            success: function (response) {
+                                if (response.error == true) {
+                                    toastr.error(response.message, "Xəta!");
+                                    return;
+                                }
+                                toastr["success"](response.message, "Ugurludur!");
+                                $(`tr[data-entity-id=${entityId}]`).remove();
+                            },
+                            error: function (response) {
+                                //console.warn(response);
+                            }
+                        });
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

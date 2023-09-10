@@ -1,0 +1,406 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/assets/css/blog.css">
+    <link rel="stylesheet" href="~/assets/css/eventdetails.css">
+    <link rel="stylesheet" href="~/assets/css/blogpostdetail.css">
+    <link rel="stylesheet" href="~/assets/css/coursedetails.css">
+    <link rel="stylesheet" href="~/assets/css/teachers.css">
+    <link rel="stylesheet" href="~/assets/css/teacherdetail.css">
+    <link rel="stylesheet" href="~/assets/css/contactus.css">
+    <link href="~/assets/css/stylemedia.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/course.css">
+    <link href="~/assets/css/headerandfootermedia.css" rel="stylesheet" />
+    <link href="~/assets/css/singin.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
+
+</head>
+<body>
+
+    <style>
+        main .item {
+            position: relative;
+        }
+
+            main .item .slidewritings {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 200px 0px 0px;
+                background-color: black;
+                opacity: 0.7;
+            }
+
+                main .item .slidewritings h5, main .item .slidewritings h2, main .item .slidewritings p {
+                    text-align: center;
+                    color: white;
+                }
+
+                main .item .slidewritings h5 {
+                    font-size: 24px;
+                    margin: 0px 0px 4px;
+                    padding: 0px 0px 13px;
+                    position: relative;
+                }
+
+                    main .item .slidewritings h5::after {
+                        content: "";
+                        display: block;
+                        width: 10%;
+                        height: 1px;
+                        background-color: white;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 45%;
+                    }
+
+                main .item .slidewritings h2 {
+                    font-size: 50px;
+                    margin: 0px 0px 13px;
+                    font-weight: bold;
+                }
+
+                main .item .slidewritings p {
+                    font-size: 25px;
+                    font-weight: lighter;
+                    margin: 0px 0px 30px;
+                }
+
+                main .item .slidewritings a {
+                    width: 163px;
+                    height: 53px;
+                    background-color: transparent;
+                    font-size: 18px;
+                    padding: 11px 28px 10px;
+                    border: 1px solid #fff;
+                    color: #FFFFFF;
+                    font-weight: bold;
+                    margin-left: 45%;
+                    text-decoration: none;
+                }
+
+                    main .item .slidewritings a:hover {
+                        border: 1px solid #e79800;
+                        background-color: #e79800;
+                        -webkit-transition: 0.35s;
+                        transition: 0.35s;
+                        color: #fff;
+                    }
+    </style>
+
+    <header class="header">
+        <div class="headertopbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="number">
+                            <p class="contact">
+                                <i class="fa fa-phone"></i>
+                                Call Us  on 0800 123 46 4747
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <ul class="login">
+                            @if (User.Identity.Name != null)
+                            {
+                                @if (User.IsInRole("Superadmin") || User.IsInRole("Admin"))
+                                {
+                                    <li><a asp-area="admin" asp-controller="dashboard" asp-action="index"><i class="fa fa-sign-in"></i>Adminity</a></li>
+                                    <li><a asp-controller="account" asp-action="signout"><i class="fa fa-sign-in"></i>@Sidebar.Logout</a></li>
+                                }
+                                else if (User.IsInRole("Telebe") || User.IsInRole("Muellim"))
+                                {
+                                    <li><a asp-area="kabinet" asp-controller="kabinet" asp-action="index"><i class="fa fa-sign-in"></i>Kabinete Girish</a></li>
+                                    <li><a asp-controller="account" asp-action="signout"><i class="fa fa-sign-in"></i>@Sidebar.Logout</a></li>
+                                }
+                                else
+                                {
+                                    <li><a asp-controller="account" asp-action="signout"><i class="fa fa-sign-in"></i>@Sidebar.Logout</a></li>
+                                }
+                            }
+                            else
+                            {
+                                <li><a asp-controller="account" asp-action="signin"><i class="fa fa-sign-in"></i>@Sidebar.Sign_In</a></li>
+                                <li><a data-lang="az" style="cursor:pointer;">Az</a></li>
+                                <li><a data-lang="en" style="cursor:pointer;">En</a></li>
+                                <li><a data-lang="ru" style="cursor:pointer;">Ru</a></li>
+                            }
+                        </ul>
+                        <ul class="headernav">
+                            <li><a asp-controller="blog" asp-action="index">@Sidebar.Xeberler</a></li>
+                            <li><a asp-controller="event" asp-action="index">@Sidebar.Event</a></li>
+                            <li><a asp-controller="course" asp-action="index">Giving</a></li>
+                            <li><a asp-controller="contact" asp-action="index">@Sidebar.Contact_Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="headernavigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                        <div class="logo">
+                            <a href="#"><img src="~/images/extra-images/logo_2.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                        <div class="navigationrow">
+                            <ul>
+                                <li><a asp-controller="homepage" asp-action="index">@Sidebar.Home</a></li>
+                                <li><a asp-controller="aboutus" asp-action="index">@Sidebar.About_Us</a></li>
+                                <li><a asp-controller="event" asp-action="index">@Sidebar.Event</a></li>
+                                <li><a asp-controller="blog" asp-action="index">@Sidebar.Blog</a></li>
+                                <li><a asp-controller="course" asp-action="index">@Sidebar.Courses</a></li>
+                                <li><a asp-controller="teacher" asp-action="index">@Sidebar.Muellim</a></li>
+                                <li><a asp-controller="contact" asp-action="index">@Sidebar.Contact_Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="responsivenavbar">
+                            <i class="fa-solid fa-bars"></i>
+
+                            <div class="barmen">
+                                <ul>
+                                    <li>
+                                        <a asp-controller="homepage" asp-action="index">@Sidebar.Home</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="aboutus" asp-action="index">@Sidebar.About_Us</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="event" asp-action="index">@Sidebar.Event</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="blog" asp-action="index">@Sidebar.Blog</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="course" asp-action="index">@Sidebar.Courses</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="teacher" asp-action="index">@Sidebar.Muellim</a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="contact" asp-action="index">@Sidebar.Contact_Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        @RenderBody()
+
+    </main>
+
+
+    <div class="subscribenews">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="subscribewriting">
+                        <h5>Subcribe weekly newsletter</h5>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="subscribewriting">
+                        <form>
+                            <input type="email" placeholder="Enter Valid Email Address">
+                            <button><i class="fa fa-paper-plane"></i>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-md-12">
+                    <div class="footerrow footerlink">
+                        <h5>Information</h5>
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">About us</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Our Stories</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">My Account</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Our History</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Sprcialist Info</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col-lg-3 col-md-12">
+                    <div class="footerrow footerlink">
+                        <h5>Student Help</h5>
+                        <ul>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">My Info</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">My Questions</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">F.A.Q</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Serch Courses</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i><a href="#">Latest Informations</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footerrow footerinstagram">
+                        <h5>Instagram</h5>
+                        <ul>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-1.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-2.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-3.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-4.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-5.jpg" alt="" /></a></li>
+                            <li><a href="#"><img src="~/images/extra-images/instagram-6.jpg" alt="" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="footerrow footercontact">
+                        <h5>Contact</h5>
+                        <ul>
+                            <li>PO Box UN152468, 1 Street North, New Towm, California, USA</li>
+                            <li>Phone : <a href="#"> 5 (012) 4565 789</a></li>
+                            <li>Fax : <a href="#"> 5 (012) 4565 789</a></li>
+                            <li>Email : <a href="#"> Info@info.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lastsec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="logos">
+                        <a href="#"><img src="~/images/extra-images/ft_logo.png" alt="" /></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="copyright">
+                        <span>&copy; All Rights reserved. Powered By <a href="#">KODEFOREST</a></span>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-12">
+                    <ul class="bankcards">
+                        <li><a href="#"><img src="~/images/extra-images/visacard.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/images/extra-images/mastercard.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/images/extra-images/americancard.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/images/extra-images/card.png" alt="" /></a></li>
+                        <li><a href="#"><img src="~/images/extra-images/descoverycard.png" alt="" /></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="~/js/owl.carousel.min.js"></script>
+<script src="~/js/custom.js"></script>
+<script src="~/assets/js/tabs.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<script>
+         $(document).ready(function () {
+            const lang = `@Context.GetCurrentCulture()`;
+
+            const selectedLang = $(`[data-lang = "${lang}"]`).text()
+
+            $(`[data-lang-viewer="language"]`).text(selectedLang)
+
+            $('[data-lang]').click(function (e) {
+                e.preventDefault();
+
+                var path = `${window.location.pathname}${window.location.search}`;
+
+                var selectedLang = $(e.currentTarget).data('lang');
+
+                var result = /\/(en|az|ru)?\/?(.*)?/.exec(path);
+
+                if (result != null && result[2] != undefined) {
+                    path = `/${selectedLang}/${result[2]}`;
+                }
+                else if (result != null) {
+                    path = `/${selectedLang}`;
+                }
+
+                window.location.href = path;
+
+            })
+
+        })
+
+
+</script>
+
+
+@RenderSection("js", required: false)
+
+</html>
+
+

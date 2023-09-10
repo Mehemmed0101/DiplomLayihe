@@ -1,0 +1,86 @@
+﻿@model CourseCategories
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Service Cards</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CoursePhoto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CoursePhoto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseCategory)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseCategory)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseDetail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseDetail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourseStructure)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourseStructure)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EntryRequirment)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EntryRequirment)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Placements)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Placements)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Length)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Length)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lessons)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lessons)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="editbtn">Edit</a> |
+    <a class="btn btn-grd-inverse" asp-action="Index">Back to List</a>
+</div>

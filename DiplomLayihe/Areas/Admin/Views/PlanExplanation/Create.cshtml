@@ -1,0 +1,56 @@
+﻿@model PlanExplanations
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .plans{
+            min-height: 35px;
+        }
+
+        .plans > option {
+            background-color: white;
+        }
+
+    </style>
+}
+
+<h1>Create</h1>
+
+<h4>Plan Explanations</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Text" class="control-label"></label>
+                <input asp-for="Text" class="form-control" />
+                <span asp-validation-for="Text" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group" style="display:flex; flex-direction:column;">
+                <label name="PlanId" class="control-label">Plan Name</label>
+                <select class="control-label plans" name="PlanId" asp-items="ViewBag.PlanName">
+                    Plans
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

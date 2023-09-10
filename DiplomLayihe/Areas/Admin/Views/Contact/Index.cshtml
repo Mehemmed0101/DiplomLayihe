@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Contact Questions</h1>
+<p>
+    <a class="btn btn-primary" asp-action="answered" style="color: white;">
+        Answered
+    </a>
+    <a class="btn btn-primary" asp-action="nonanswered" style="color: white;">
+        Not Answered
+    </a>
+    <a class="btn btn-primary" asp-action="index" style="color: white;">
+        All
+    </a>
+</p>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-entity-id="@item.Id">
+                            <td id="name">@item.Name</td>
+                            <td id="email">@item.Email.HtmlToPlainText().ToEllipse(20)</td>
+                            <td id="comment">@item.Comment.HtmlToPlainText().ToEllipse(15)</td>
+                            <td id="answer">@item.Answer.HtmlToPlainText().ToEllipse(15)</td>
+                            <td class="atributlar">
+                                @if (item.AnswerDate == null)
+                                {
+                                    <a asp-action="toanswer" asp-route-id="@item.Id">Answer</a>
+                                }
+                                else
+                                {
+                                    <a style="color: yellowgreen;"> Answered</a>
+                                }
+                                | <a asp-action="details" asp-route-id="@item.Id">Details</a> |
+                                @if (item.EmailSended == false && item.AnswerDate != null)
+                                {
+                                    <a style="color: red;" asp-action="details" asp-route-id="@item.Id">Email Gonderilmeyib</a>
+                                }
+                                else if (item.AnswerDate == null)
+                                {
+                                    <a style="color: red;" asp-action="toanswer" asp-route-id="@item.Id">Email Cavablandirilmayib</a>
+                                }
+                                else if (item.EmailSended == true)
+                                {
+                                    <a style="color: yellowgreen;"> Email Gonderilib</a>
+                                }
+                                <a onclick="removeEntity(event, @item.Id, '@item.Name')" class="btn">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

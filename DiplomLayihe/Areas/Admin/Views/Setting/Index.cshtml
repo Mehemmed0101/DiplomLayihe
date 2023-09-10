@@ -1,0 +1,77 @@
+﻿
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .photo-viewer {
+            width: 200px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-image: url('/photouploads/images/file-uploads1.jpg');
+            cursor: pointer;
+        }
+
+        #file {
+            display: none;
+        }
+    </style>
+}
+
+
+<h1>User Melumatlari</h1>
+
+<hr />
+<form method="post" asp-action="settingedit" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">User Name</label>
+                <input disabled value="@ViewBag.User.UserName" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">Isim</label>
+                <input name="Name" value="@ViewBag.User.Name" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">Soyad</label>
+                <input name="Surname" value="@ViewBag.User.Surname" class="form-control" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input name="Email" value="@ViewBag.User.Email" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label class="control-label">Telefon</label>
+                <input name="PhoneNumber" value="@ViewBag.User.PhoneNumber" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Redakte et" class="btn btn-warning" />
+    </div>
+    <div class="form-group">
+        <a class="btn btn-primary" asp-action="sifreedit">Shifreni Deyish</a>
+    </div>
+</form>
+
+<div>
+    <a asp-area="admin" asp-controller="dashboard" asp-action="Index">Back to Main Page</a>
+</div>

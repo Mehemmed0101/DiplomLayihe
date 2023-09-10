@@ -1,0 +1,681 @@
+﻿@model HomePageViewModel
+@{
+    Layout = "_Layout";
+}
+
+
+<div class="">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="slidewritings">
+                    <h5>The Best Learning Institution</h5>
+                    <h2>WELCOME TO OUR UNIVERSITY</h2>
+                    <p>We Belive there is nothing more important than Education.</p>
+                    <a href="">READ MORE</a>
+                </div>
+                <img src="~/images/extra-images/slider1.jpg" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <div class="slidewritings">
+                    <h5>Opening A New World Of Education</h5>
+                    <h2>LARGEST EDUCATION INSTITUTE</h2>
+                    <p>We are the largest education online institute.</p>
+                    <a href="">READ MORE</a>
+                </div>
+                <img src="~/images/extra-images/slider2.jpg" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <div class="slidewritings">
+                    <h5>New Online Courses</h5>
+                    <h2>WE BRING NEW ONLINE COURSES</h2>
+                    <p>Largest Online Courses available here.</p>
+                    <a href="">READ MORE</a>
+                </div>
+                <img src="~/images/extra-images/slider3.jpg" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="coursecategories">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="categoriesleft">
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="categoriesheading">
+                                    <h3>Course Categories</h3>
+                                </div>
+                            </div>
+                            @foreach (var item in Model.CourseCategoriesForHomePage)
+                            {
+                                <div class="col-md-6">
+                                    <div class="categoriesleft @item.ColorClass">
+                                        <span><i class="@item.IconClass"></i></span>
+                                        <div class="ctgleftwritings">
+                                            <h5>@item.Title</h5>
+                                            <p>@item.Text</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="categoriesright">
+                    <div class="categoriesheading">
+                        <h3>Course Categories</h3>
+                    </div>
+
+                    <form>
+                        <div class="categoriesform">
+                            <input type="text" placeholder="Name:">
+                        </div>
+                        <div class="categoriesform">
+                            <input type="text" placeholder="Email:">
+                        </div>
+
+                        <div class="categoriesform">
+                            <select>
+                                <option value="1">Select 1</option>
+                                <option value="9">Select 2</option>
+                                <option value="2">Select 3</option>
+                                <option value="3">Select 4</option>
+                                <option value="6">Select 5</option>
+                                <option value="8">Select 6</option>
+                            </select>
+                        </div>
+
+                        <div class="categoriesform">
+                            <select>
+                                <option value="1">Select 1</option>
+                                <option value="9">Select 2</option>
+                                <option value="2">Select 3</option>
+                                <option value="3">Select 4</option>
+                                <option value="6">Select 5</option>
+                                <option value="8">Select 6</option>
+                            </select>
+                        </div>
+
+                        <div class="categoriesform">
+                            <select>
+                                <option value="1">Select 1</option>
+                                <option value="9">Select 2</option>
+                                <option value="2">Select 3</option>
+                                <option value="3">Select 4</option>
+                                <option value="6">Select 5</option>
+                                <option value="8">Select 6</option>
+                            </select>
+                        </div>
+
+                        <div class="categoriesform">
+                            <select class="basic">
+                                <option value="1">Select 1</option>
+                                <option value="9">Select 2</option>
+                                <option value="2">Select 3</option>
+                                <option value="3">Select 4</option>
+                                <option value="6">Select 5</option>
+                                <option value="8">Select 6</option>
+                            </select>
+                        </div>
+                        <div class="categoriesform">
+                            <input type="text" placeholder="Enter Your Keywords:">
+                        </div>
+                        <button>Search For Courses</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="sectionwelcome">
+    <div class="welcomecontainer">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <img style="width: 100%;" src="~/images/extra-images/bg-1.jpg" alt="">
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="welcomerightside">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="headingwrite">
+                                <h3>Welcome To University of Education</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="welcomecart">
+                                <div class="welcomewritings">
+                                    <span>
+                                        <i class="fa-solid fa-globe"></i>
+                                    </span>
+                                    <h6>BOOKS & LIBRARY</h6>
+                                    <p>World Largest books and library center is here where you can study the latest trends of the education.</p>
+                                    <a href="#">view more</a>
+                                </div>
+
+                                <div class="welcomeimage">
+                                    <img src="~/images/extra-images/intro-1.jpg" alt="" />
+                                    <div class="imagewrite">
+                                        <a href="#">Learn Courses Online</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="welcomecart">
+                                <div class="welcomewritings">
+                                    <span>
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </span>
+                                    <h6>BOOKS & LIBRARY</h6>
+                                    <p>World Largest books and library center is here where you can study the latest trends of the education.</p>
+                                    <a href="#">view more</a>
+                                </div>
+
+                                <div class="welcomeimage">
+                                    <img src="~/images/extra-images/intro-2.jpg" alt="" />
+                                    <div class="imagewrite">
+                                        <a href="#">Learn Courses Online</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="welcomecart">
+                                <div class="welcomewritings">
+                                    <span>
+                                        <i class="fa-solid fa-chalkboard-user"></i>
+                                    </span>
+                                    <h6>BOOKS & LIBRARY</h6>
+                                    <p>World Largest books and library center is here where you can study the latest trends of the education.</p>
+                                    <a href="#">view more</a>
+                                </div>
+
+                                <div class="welcomeimage">
+                                    <img src="~/images/extra-images/intro-3.jpg" alt="" />
+                                    <div class="imagewrite">
+                                        <a href="#">Learn Courses Online</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="courses">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="coursesheading">
+                    <h3>Our Course</h3>
+                </div>
+            </div>
+
+
+            <div class="coursetabs">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tabcontainer">
+                            <div class="row">
+
+                                @foreach (var item in Model.CourseCategories)
+                                {
+                                    <div class="col-lg-4 col-md-6 col-sm-12">
+                                        <div class="tabs">
+                                            <div class="tabhead">
+                                                <img style="width: 100%;" src="~/photouploads/images/@item.CoursePhoto" alt="">
+                                                <span class="seemore"><a asp-controller="course" asp-action="coursesingle" asp-route-id="@item.Id">See More</a></span>
+                                            </div>
+
+                                            <div class="tabwritings">
+                                                <span class="price">$@item.Price</span>
+                                                <h5><a href="#">@item.CourseName</a></h5>
+                                                <p>
+                                                    <span>@item.CreatedDate.ToString("MMM d, yyyy")</span>
+                                                </p>
+                                                <p class="tabcomment">@item.CourseDetail.HtmlToPlainText().ToEllipse(250)</p>
+                                            </div>
+                                            @foreach (var teachers in item.CourseTeachers)
+                                            {
+                                                <div class="tabwritings2">
+                                                    <div class="tabimg">
+                                                        <img style="width: 48px !important;" src="~/photouploads/images/@teachers.Teachers.TeacherPhoto" alt="" />
+                                                    </div>
+                                                    <div class="tabauthor">
+
+
+                                                        <h6 class="authorname">@teachers.Teachers.TeacherName</h6>
+
+
+                                                        <div class="rating">
+                                                            <span class="ulduzlar">☆</span>
+                                                            <span class="ulduzlar">☆</span>
+                                                            <span class="ulduzlar">☆</span>
+                                                            <span class="ulduzlar">☆</span>
+                                                            <span class="ulduzlar">☆</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                        </div>
+
+                                    </div>
+                                }
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="gallery">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="galleryhead">
+                <h3>Our Gallery</h3>
+                <p>Student gallery of the year past graduated passouts</p>
+            </div>
+        </div>
+
+
+        <div class="gallerymain">
+            <div class="gallerycontainer">
+
+                @foreach (var item in Model.EventGallery)
+                {
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="gallerycard">
+                            <div class="onephoto">
+                                <img alt="" src="~/photouploads/images/@item.GalleryPhoto">
+                                <div class="gallerybefore">
+                                    <a href="~/images/extra-images/home-gallery1.jpg">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-link"></i>
+                                    </a>
+                                    <h5>Lorem Ipsum Proin</h5>
+                                    <p>Convocation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-user-group"></i></span>
+                    <h3>94,532</h3>
+                    <h5>FOREIGN FOLLOWERS</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-book"></i></span>
+                    <h3>11,223</h3>
+                    <h5>CLASSES COMPLETE</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-trophy"></i></span>
+                    <h3>282,673</h3>
+                    <h5>STUDENTS ENROLLED</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-person-chalkboard"></i></span>
+                    <h3>370</h3>
+                    <h5>CERTIFIED TEACHERS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="facultymember">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="facultymemberheading">
+                    <h3>Faculty member</h3>
+                </div>
+            </div>
+
+            @foreach (var item in Model.Teachers)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                    <div class="facultywrap">
+                        <div class="facultycard">
+                            <div class="aboutmember">
+                                <div class="memberimg">
+                                    <img src="~/photouploads/images/@item.TeacherPhoto" alt="" />
+                                    <div class="memberlinks">
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                                    </div>
+                                </div>
+                                <div class="memberwritings">
+                                    <h6><a href="#">@item.TeacherName</a></h6>
+                                    <b>@item.TeacherLevel</b>
+                                    <p>@item.AboutTeacher.HtmlToPlainText().ToEllipse(50)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="latestnews">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="latestnewsheading">
+                    <h3>Latest News &amp; Event</h3>
+                </div>
+            </div>
+
+
+            @{int a = 1;}
+
+            @foreach (var item in Model.LastNewsandEvents)
+            {
+                a++;
+
+                if (a % 2 == 0)
+                {
+
+        <div class="col-lg-6 col-md-6">
+            <div class="newsleft">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6  col-sm-12">
+                        <div class="leftcard">
+                            <h4>@item.CreatedDate.ToString("MMM")</h4>
+                            <p>@item.Title</p>
+                            <ul class="aboutpost">
+                                <li>By<a href="#">Admin</a></li>
+                                <li>@item.CreatedDate.ToString("MM dd, yyyy")</li>
+                                <li><a href="#">21 Comments</a></li>
+                            </ul>
+                            <a asp-action="details" asp-route-id="@item.Id" class="readmore">read more<i class="fa fa-long-arrow-right"></i></a>
+                            <span>@item.CreatedDate.ToString("dd")</span>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 col-md-6  col-sm-12 newsphoto">
+                        <div class="photo">
+                            <img src="~/photouploads/images/@item.EventPhoto" alt="">
+                            <div class="photobefore">
+                                <a href="blog-detail.html">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> }
+
+
+
+    if (a % 2 == 1)
+    {
+        <div class="col-lg-6 col-md-6">
+            <div class="newsleft">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 newsphoto">
+                        <div class="photo">
+                            <img src="~/photouploads/images/@item.EventPhoto" alt="">
+                            <div class="photobefore">
+                                <a href="blog-detail.html">
+                                    <i class="fa fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+
+                        <div class="leftcard2">
+                            <h4>@item.CreatedDate.ToString("MMM")</h4>
+                            <p>@item.Title</p>
+                            <ul class="aboutpost2">
+                                <li>By<a href="#">Admin</a></li>
+                                <li>@item.CreatedDate.ToString("MM dd, yyyy")</li>
+                                <li><a href="#">21 Comments</a></li>
+                            </ul>
+                            <a asp-action="details" asp-route-id="@item.Id" class="readmore2">read more<i class="fa fa-long-arrow-right"></i></a>
+                            <span>@item.CreatedDate.ToString("dd")</span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>}
+
+
+
+
+
+
+}
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="training">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="trainingimg">
+                <div class="imgcontainer">
+                    <img src="~/images/extra-images/training-thumb.png" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="trainingmain">
+                <h2>Get The Coaching Training</h2>
+                <h3>By Simon Jones almost Free</h3>
+                <ul class="squares">
+                    <li>
+                        <span class="days">195</span>
+                        <p class="days_ref">days</p>
+                    </li>
+                    <li>
+                        <span class="hours">20</span>
+                        <p class="hours_ref">hours</p>
+                    </li>
+                    <li>
+                        <span class="minutes">34</span>
+                        <p class="minutes_ref">minutes</p>
+                    </li>
+                    <li>
+                        <span class="seconds last">17</span>
+                        <p class="seconds_ref">seconds</p>
+                    </li>
+                </ul>
+                <p class="limited">It’s limited Seating! Hurry up</p>
+                <a href="#" class="registerbtn">REGISTER NOW</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pricingheading">
+                    <h3>Plan and Pricing</h3>
+                </div>
+            </div>
+
+
+            <div class="pricingmain">
+                <div class="row">
+
+                    @foreach (var item in Model.PlanAndPricing)
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="pricingcards">
+                                <h4>@item.PlanType</h4>
+                                <div class="aboutprice">
+                                    <p>
+                                        $ @item.PlanPrice
+                                    </p>
+                                    <h3>@item.PlanTime</h3>
+                                </div>
+                                <ul>
+
+                                    @foreach (var planex in Model.PlanExplanations.Where(p => p.PlanId == item.Id))
+                                    {
+                                        <li><a href="#">@planex.Text</a></li>
+
+                                    }
+                                </ul>
+                                <button class="subscribe">subscribe Now</button>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="testimonialheading">
+                    <h3>Our Testimonial</h3>
+                </div>
+            </div>
+
+
+            <div class="testimonialmain">
+
+                <div class="testimonialcards">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="testimonialwrap">
+                                <div class="testimonialimg">
+                                    <img src="~/images/extra-images/testemonial.1.jpg" alt="" />
+                                </div>
+                                <div class="testimonialtext">
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.aenean sollicitudin, lorem quis bibendum auctor...</p>
+                                    <a href="#">John Doe<span>- Happy Student</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="testimonialwrap">
+                                <div class="testimonialimg">
+                                    <img src="~/images/extra-images/testemonial.1.jpg" alt="" />
+                                </div>
+                                <div class="testimonialtext">
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.aenean sollicitudin, lorem quis bibendum auctor...</p>
+                                    <a href="#">John Doe<span>- Happy Student</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+

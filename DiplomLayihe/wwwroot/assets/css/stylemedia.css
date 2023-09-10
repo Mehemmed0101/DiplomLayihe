@@ -1,0 +1,61 @@
+@media only screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  main .counter {
+    display: none;
+  }
+  main .slidewritings {
+    padding: 100px !important;
+  }
+  main .slidewritings h5, main .slidewritings p, main .slidewritings a {
+    display: none;
+  }
+  main .slidewritings h2 {
+    font-size: 30px !important;
+  }
+  main .welcomecontainer .bigphoto {
+    display: none;
+  }
+  main .banner .bannerright {
+    display: none;
+  }
+  main .aboutuni .aboutuniimg {
+    margin-top: 10px;
+  }
+
+    .main .tabwritings{
+        margin-top: 200px;
+
+    }
+
+    .main .tabs{
+        margin-bottom: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .headertopbar .number {
+        display: none;
+    }
+    .contactheading {
+        margin-top: 50px !important;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .main .tabwritings {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header .headertopbar .headernav {
+        display: none !important;
+    }
+
+    .inputstextarea{
+        margin: 20px 0px;
+    }
+}
+/*# sourceMappingURL=stylemedia.css.map */

@@ -1,0 +1,129 @@
+﻿@model IEnumerable<LastNewsandEvents>
+
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bannermain">
+                        <div class="bannerleft">
+                            <h3>Event</h3>
+                        </div>
+
+                        <div class="bannerright">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><i class="fa-solid fa-angle-right"></i></li>
+                                <li><a href="#">Event</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="latestnews">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latestnewsheading">
+                        <h3>Latest News &amp; Event</h3>
+                    </div>
+                </div>
+
+                @{int a = 1;}
+
+                @foreach (var item in Model)
+                {
+                    a++;
+
+                    if (a % 2 == 0)
+                    {
+
+            <div class="col-md-6 col-sm-12">
+                <div class="newsleft">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 .col-xs-12">
+                            <div class="leftcard">
+                                <h4>@item.CreatedDate.ToString("MMM")</h4>
+                                <p>@item.Title</p>
+                                <ul class="aboutpost">
+                                    <li>By<a href="#">Admin</a></li>
+                                    <li>@item.CreatedDate.ToString("MM dd, yyyy")</li>
+                                    <li><a href="#">21 Comments</a></li>
+                                </ul>
+                                <a asp-action="details" asp-route-id="@item.Id" class="readmore">read more<i class="fa fa-long-arrow-right"></i></a>
+                                <span>@item.CreatedDate.ToString("dd")</span>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-sm-6 .col-xs-12 newsphoto">
+                            <div class="photo">
+                                <img src="~/photouploads/images/@item.EventPhoto" alt="">
+                                <div class="photobefore">
+                                    <a href="blog-detail.html">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> }
+
+
+
+                            if (a % 2 == 1)
+                            {
+            <div class="col-md-6 col-sm-12">
+                <div class="newsleft">
+                    <div class="row">
+
+                        <div class="col-md-6 col-sm-6 .col-xs-12 newsphoto">
+                            <div class="photo">
+                                <img src="~/photouploads/images/@item.EventPhoto" alt="">
+                                <div class="photobefore">
+                                    <a href="blog-detail.html">
+                                        <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 .col-xs-12">
+
+                            <div class="leftcard2">
+                                <h4>@item.CreatedDate.ToString("MMM")</h4>
+                                <p>@item.Title</p>
+                                <ul class="aboutpost2">
+                                    <li>By<a href="#">Admin</a></li>
+                                    <li>@item.CreatedDate.ToString("MM dd, yyyy")</li>
+                                    <li><a href="#">21 Comments</a></li>
+                                </ul>
+                                <a asp-action="details" asp-route-id="@item.Id" class="readmore2">read more<i class="fa fa-long-arrow-right"></i></a>
+                                <span>@item.CreatedDate.ToString("dd")</span>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>}
+
+
+                    
+                    
+
+
+                        }
+
+
+
+
+
+            </div>
+        </div>
+    </section>

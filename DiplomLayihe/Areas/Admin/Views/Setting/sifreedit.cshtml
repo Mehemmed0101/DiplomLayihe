@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .photo-viewer {
+            width: 200px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-image: url('/photouploads/images/file-uploads1.jpg');
+            cursor: pointer;
+        }
+
+        #file {
+            display: none;
+        }
+    </style>
+}
+
+
+<h1>Edit</h1>
+
+<h4>Password</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="sifreedit" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label class="control-label">Old Password</label>
+                <input name="OldPassword" type="password" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">New Password</label>
+                <input name="NewPassword" type="password" class="form-control" />
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-area="admin" asp-controller="dashboard" asp-action="Index">Back to Main Page</a>
+</div>

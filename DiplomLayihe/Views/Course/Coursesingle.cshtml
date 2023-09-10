@@ -1,0 +1,377 @@
+﻿@model CourseViewModel
+
+
+
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>BLOG DETAIL</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Course Detail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="coursedetails">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8  col-sm-12">
+                <div class="coursesdetailcontainer">
+
+
+                    @foreach (var item in Model.CourseCategories)
+                    {
+                        <div class="coursesdetailheading">
+                            <h4>@item.CourseName</h4>
+                        </div>
+
+                        <ul class="coursedetailfonts">
+                            <li><i class="fa fa-user"></i><a href="#">John Doe</a></li>
+                            <li><i class="fa-solid fa-clock"></i>@item.CreatedDate.ToString("MMM d, yyyy")</li>
+                            <li><i class="fa fa-bookmark"></i><a href="#">@item.CourseCategory</a></li>
+                        </ul>
+
+                        <div class="coursedetailimg">
+                            <div class="detailimg">
+                                <img src="~/photouploads/images/@item.CoursePhoto" alt="" />
+                            </div>
+                        </div>
+
+
+                        <div class="detailtabs">
+
+
+                            <div id="tabs">
+                                <div class="tab whiteborder">Course Details</div>
+                                <div class="tab">Course Structure</div>
+                                <div class="tab">Entry Requirment</div>
+                                <div class="tab">Placements</div>
+
+
+
+
+
+                                <div class="tabContent">
+                                    <div class="coursetabdetail">
+                                        <div class="coursetabheading">
+                                            <h3>Course Details</h3>
+                                        </div>
+                                        <p>@item.CourseDetail</p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="tabContent">
+                                    <div class="coursetabdetail">
+                                        <div class="coursetabheading">
+                                            <h3>COURSE STRUCTURE</h3>
+                                        </div>
+                                        <p>@item.CourseStructure</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="tabContent">
+
+                                    <div class="coursetabdetail">
+                                        <div class="coursetabheading">
+                                            <h3>ENTRY REQUIRMENT</h3>
+                                        </div>
+                                        <p>
+                                            @item.EntryRequirment
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                                <div class="tabContent">
+
+                                    <div class="coursetabdetail">
+                                        <div class="coursetabheading">
+                                            <h3>PLACEMENTS</h3>
+                                        </div>
+                                        <p>
+                                            @item.Placements
+                                        </p>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="coursegallery">
+                                <div class="coursegalleryheading">
+                                    <h6>Course Gallery</h6>
+                                </div>
+                                <div class="row">
+
+
+
+                                    <div class="col-md-4 col-sm-6 col-xs-12 col-12 ">
+                                        <div class="coursecardimg">
+                                            <img src="~/images/extra-images/blog_detail1.jpg" alt="" />
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xs-12 col-12 ">
+                                        <div class="coursecardimg">
+                                            <img src="~/images/extra-images/blog_detail2.jpg" alt="" />
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xs-12 col-12 ">
+                                        <div class="coursecardimg">
+                                            <img src="~/images/extra-images/blog_detail3.jpg" alt="" />
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xs-12 col-12 ">
+                                        <div class="coursecardimg">
+                                            <img src="~/images/extra-images/blog_detail4.jpg" alt="" />
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="margin-bottom">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
+                            </div>
+                        </div>
+                    }
+
+
+
+                    <div class="blogauthor">
+                        <div class="authorimg"><img src="~/images/extra-images/author.jpg" alt=""></div>
+                        <div class="blogaboutauthor">
+                            <h6>
+                                <a href="#">Alfred Marshal</a>
+                            </h6>
+                            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum quis bibendum.</p>
+                            <ul class="blogauthorsocial">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+
+                <div class="convocationrightside">
+
+                    <div class="registerbar">
+                        <a class="apply" href="#">Apply Now</a>
+                        <ul class="aboutregister">
+
+                            @foreach (var item in Model.CourseCategories)
+                            {
+                                <li>Price : <span class="green">$@item.Price</span></li>
+                                <li>Lessons : @item.Lessons</li>
+                                <li>Length : @item.Length hours</li>
+                                <li>Level : @item.Level</li>
+                                <li>Price : $@item.Price</li>
+                                <li>Category: @item.CourseCategory</li>
+                            }
+
+
+                            <li>
+
+                                <span>Rate :</span>
+                                <div class="rating">
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                    <span>☆</span>
+                                </div>
+                                <span>(69 Reviews)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="teacherbar">
+                        <h2>Teachers</h2>
+
+                        @foreach (var item in Model.CourseCategories.SelectMany(cp=>cp.CourseTeachers))
+                        {
+                            <div class="aboutteacher">
+                                <div class="teacherimg"><img src="~/photouploads/images/@item.Teachers.TeacherPhoto" alt="" /></div>
+
+                                <div class="teacherwriting">
+                                    <h4>@item.Teachers.TeacherName</h4>
+                                    <p>@item.Teachers.TeacherLevel</p>
+                                </div>
+                                <p>@item.Teachers.AboutTeacher.HtmlToPlainText().ToEllipse(150)</p>
+                                <ul class="teacherfonts">
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        }
+
+
+
+                    </div>
+
+
+
+                    <div class="convocationsearch">
+                        <h2>Search Course</h2>
+                        <form>
+                            <input type="search" placeholder="Keyword...">
+                        </form>
+                    </div>
+
+                    <div class="convocationarchive">
+                        <h2>Archives</h2>
+                        <ul class="sidebararchive">
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>January</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>February</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>March</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>April</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>May</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationarchiverecentposts">
+                        <h2>Recent Posts</h2>
+                        <ul class="sidebarrepost">
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationcategories">
+                        <h2>categories</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Business &amp; Economics</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Politics &amp; History</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Medical Sciences &amp; Health</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Fine Arts</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Tourism &amp; Culture</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Sports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="convocationcourseslist">
+                        <h2>Latest Courses</h2>
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationtagcloud">
+                        <h2>Tags Cloud</h2>
+                        <ul>
+                            @foreach (var item in Model.CourseCategories.SelectMany(cp=>cp.CourseTagCloud))
+                            {
+                                <li><a href="#">@item.PostTag.Name</a></li>
+                            }
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,166 @@
+﻿@model IEnumerable<CourseCategories>
+
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>COURSES LIST</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Courses List</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="coursemainpage">
+    <div class="coursecontainer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="coursecards">
+                            <div class="container" style="width: auto !important;">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-sm-5 col-xs-12 col-12">
+                                        <div class="coursecardimg">
+                                            <img src="~/photouploads/images/@item.CoursePhoto" alt="" />
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-sm-7 col-xs-12 col-12">
+                                        <div class="coursecardmain">
+                                            <div class="coursecardheading">
+                                                <h5>@item.CourseName</h5>
+                                            </div>
+                                            <div class="courseprice">
+                                                <span>Course Price :</span><p>$@item.Price</p>
+                                            </div>
+                                            <div class="cardrating">
+                                                <span>Rating :</span>
+                                                <div class="rating">
+                                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                                </div>
+                                            </div>
+                                            <p class="coursemainwriting">@item.CourseDetail.HtmlToPlainText().ToEllipse(175)</p>
+                                            <a asp-controller="course" asp-action="coursesingle" asp-route-id="@item.Id" >Learn More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="col-md-3">
+                    <div class="convocationrightside">
+                        <div class="convocationsearch">
+                            <h2>Search Course</h2>
+                            <form method="get" asp-action="index">
+                                <input type="search" value="@ViewData["Getsearch"]" name="search" placeholder="Enter Keyword...">
+                            </form>
+                        </div>
+
+                        <div class="convocationarchive">
+                            <h2>Archives</h2>
+                            <ul class="sidebararchive">
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right"></i>January</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right"></i>February</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right"></i>March</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right"></i>April</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-angle-right"></i>May</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="convocationcourseslist">
+                            <h2>Latest Courses</h2>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                        <a href="#">View Detail</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                        <a href="#">View Detail</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                        <a href="#">View Detail</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div>
+                                        <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                        <a href="#">View Detail</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="convocationcategories">
+                            <h2>categories</h2>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Business &amp; Economics</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Politics &amp; History</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Medical Sciences &amp; Health</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Fine Arts</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Tourism &amp; Culture</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Sports</a></li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="convocationtagcloud">
+                            <h2>Tags Cloud</h2>
+                            <ul>
+                                <li><a href="#">Science</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Fine Arts</a></li>
+                                <li><a href="#">Research</a></li>
+                                <li><a href="#">Admissions</a></li>
+                                <li><a href="#">PHD</a></li>
+                                <li><a href="#">History &amp; Politics</a></li>
+                                <li><a href="#">Sports</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

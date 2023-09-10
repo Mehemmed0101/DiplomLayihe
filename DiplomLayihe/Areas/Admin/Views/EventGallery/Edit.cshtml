@@ -1,0 +1,57 @@
+﻿@model EventGalleryEditCommand
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .photo-viewer {
+            width: 200px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-image: url('/photouploads/images/file-uploads1.jpg');
+            cursor: pointer;
+        }
+
+        #file {
+            display: none;
+        }
+    </style>
+}
+
+
+<h1>Edit</h1>
+
+<h4>Event Gallery</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label for="file1" class="control-label">Sekil</label>
+            <div class="form-group">
+                <label class="photo-viewer control-label" id="file-viewer" for="file" style="background-image: url(/photouploads/images/@Model.GalleryPhoto);"></label>
+                <input name="file" id="file" type="file" class="form-control" onchange="readFile(this)" />
+                <input type="hidden" asp-for="GalleryPhoto" />
+                <span asp-validation-for="GalleryPhoto" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

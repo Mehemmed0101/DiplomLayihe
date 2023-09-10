@@ -1,0 +1,38 @@
+﻿@model EventSpeakers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Event Speakers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpeakersPhoto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpeakersPhoto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpeakersName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpeakersName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpeakersWork)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpeakersWork)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="editbtn">Edit</a> |
+    <a class="btn btn-grd-inverse" asp-action="Index">Back to List</a>
+</div>

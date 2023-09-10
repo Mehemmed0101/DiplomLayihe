@@ -1,0 +1,835 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.eventall {
+  float: left;
+  width: 100%;
+  padding: 70px 0px;
+}
+
+.eventall .convocationhead {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.eventall .convocationhead .convocationheadimg .item div {
+  width: 100%;
+  position: relative;
+}
+
+.eventall .convocationhead .convocationheadimg .item div img {
+  width: 100%;
+}
+
+.eventall .convocationhead .convocationheadimg .item div::before {
+  content: "";
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  opacity: 1;
+  position: absolute;
+  background-color: transparent;
+  outline: 1px solid rgba(225, 225, 225, 0.5);
+  outline-offset: 9px;
+}
+
+.eventall .convocationwrap {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+.eventall .convocationwrap h4 {
+  font-weight: normal;
+  margin: 0px 0 20px 0;
+  display: block;
+  font-size: 26px;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+
+.eventall .convocationwrap .convocationtime {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e97800;
+  padding-bottom: 20px;
+}
+
+.eventall .convocationwrap .convocationtime li {
+  float: left;
+  margin-right: 29px;
+  font-size: 16px;
+  color: #999999;
+}
+
+.eventall .convocationwrap .convocationtime li i {
+  margin-right: 10px;
+}
+
+.eventall .convocationwrap .convocationwriting {
+  float: left;
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #e97800;
+}
+
+.eventall .convocationwrap .convocationwriting h5 {
+  margin: 0px 0 15px;
+  display: block;
+  color: #666;
+  font-weight: 300;
+}
+
+.eventall .convocationwrap .convocationwriting p {
+  margin-bottom: 15px;
+}
+
+.eventall .convocationwrap .convocationwriting a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 30px;
+  margin-right: 11px;
+  color: #fff;
+  border: 1px solid #e97800;
+  background-color: #e97800;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.eventall .convocationwrap .convocationwriting a:hover {
+  background-color: #000000;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.eventall .convocationwrap .convocationwriting a i {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.eventall .convocationwrap .convocationmap {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.eventall .convocationwrap .convocationmap a {
+  margin-top: 20px;
+}
+
+.eventall .convocationspkrs {
+  float: left;
+  width: 100%;
+  padding: 34px 0 39px 0;
+  border-bottom: 1px solid  #e9e9e9;
+}
+
+.eventall .convocationspkrs .convocationspkrsheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 29px;
+}
+
+.eventall .convocationspkrs .convocationspkrsheading h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.eventall .convocationspkrs .convocationspkrsheading h4 span {
+  color: #e97800;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.eventall .convocationspkrs .aboutspkrs {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 0px 0px 15px 0px;
+}
+
+.eventall .convocationspkrs .aboutspkrs:hover {
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.eventall .convocationspkrs .aboutspkrs div {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.eventall .convocationspkrs .aboutspkrs div img {
+  float: left;
+  width: 100%;
+}
+
+.eventall .convocationspkrs .aboutspkrs div img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.eventall .convocationspkrs .aboutspkrs h5 {
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.eventall .convocationspkrs .aboutspkrs h5 a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #e97800;
+}
+
+.eventall .convocationspkrs .aboutspkrs p {
+  font-size: 16px;
+  color: #777777;
+  font-weight: lighter;
+}
+
+.eventall .convocationspkrsgallery {
+  float: left;
+  width: 100%;
+  padding-top: 34px;
+}
+
+.eventall .convocationspkrsgallery .convocationgalleryheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 29px;
+}
+
+.eventall .convocationspkrsgallery .convocationgalleryheading h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.eventall .convocationspkrsgallery .convocationgalleryheading h4 span {
+  color: #e97800;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.eventall .convocationspkrsgallery .allgallery {
+  float: left;
+  width: auto;
+  margin-right: -10px;
+  margin-bottom: 20px;
+}
+
+.eventall .convocationspkrsgallery .allgallery li {
+  float: left;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.eventall .convocationspkrsgallery .allgallery li:hover a img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 0.5;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.eventall .convocationspkrsgallery .nextbtn {
+  color: #666666;
+  padding: 8px 20px;
+  font-size: 16px;
+  float: right;
+  text-decoration: none;
+  border: 1px solid #666666;
+}
+
+.eventall .convocationspkrsgallery .nextbtn:hover {
+  color: #FFFFFF;
+  border: 1px solid #e97800;
+  background-color: #e97800;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.eventall .convocationspkrsgallery .nextbtn i {
+  margin-left: 15px;
+}
+
+.eventall .convocationspkrsgallery .prevbtn {
+  color: #666666;
+  padding: 8px 20px;
+  font-size: 16px;
+  float: left;
+  text-decoration: none;
+  border: 1px solid #666666;
+}
+
+.eventall .convocationspkrsgallery .prevbtn:hover {
+  color: #FFFFFF;
+  border: 1px solid #e97800;
+  background-color: #e97800;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.eventall .convocationspkrsgallery .prevbtn i {
+  margin-right: 15px;
+}
+
+.convocationrightside {
+  height: auto;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.convocationrightside .registerbar {
+  float: left;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.convocationrightside .registerbar .apply {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #e97800;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+.convocationrightside .registerbar .apply:hover {
+  background: #000;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.convocationrightside .registerbar .aboutregister {
+  float: left;
+  width: 100%;
+  padding: 27px 0 0 0;
+}
+
+.convocationrightside .registerbar .aboutregister li {
+  float: left;
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 7px;
+}
+
+.convocationrightside .registerbar .aboutregister li:last-child {
+  margin-bottom: -7px;
+}
+
+.convocationrightside .registerbar .aboutregister li .green {
+  color: #13ab1e;
+  float: none !important;
+  font-weight: bold;
+}
+
+.convocationrightside .registerbar .aboutregister li span {
+  float: left;
+}
+
+.convocationrightside .registerbar .aboutregister li span .rating {
+  float: left;
+  margin: 6px 20px 0px;
+  line-height: normal;
+}
+
+.convocationrightside .registerbar .aboutregister li span .rating span {
+  font-size: 24px;
+  margin: 0 -5px;
+  line-height: 10px;
+}
+
+.convocationrightside .teacherbar {
+  width: 100%;
+  margin-bottom: 26px;
+}
+
+.convocationrightside .teacherbar .aboutteacher {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherimg {
+  width: 73px;
+  margin-bottom: 22px;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherimg img {
+  width: 100%;
+  height: auto;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherwriting {
+  float: none;
+  overflow: hidden;
+  padding-left: 15px;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherwriting h4 {
+  margin: -5px 0 3px;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherwriting p {
+  color: #e97800;
+  font-size: 14px;
+}
+
+.convocationrightside .teacherbar .aboutteacher p {
+  font-weight: lighter;
+  color: #777777;
+  float: left;
+  margin-bottom: 13px;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherfonts {
+  padding: 0px;
+  width: 100%;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherfonts li {
+  float: left;
+  margin-right: 5px;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherfonts li a {
+  display: block;
+  text-align: center;
+  border: 1px solid #999999;
+  color: #999999;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.convocationrightside .teacherbar .aboutteacher .teacherfonts li a:hover {
+  color: #e97800;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid #e97800;
+}
+
+.convocationrightside .convocationsearch {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationsearch h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.convocationrightside .convocationsearch form {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.convocationrightside .convocationsearch form input {
+  float: left;
+  width: 100%;
+  padding: 11px 15px 13px;
+  border: 1px solid #d7d7d7;
+  font-size: 16px;
+  color: #999999;
+  outline: none;
+}
+
+.convocationrightside .convocationsearch form input:focus {
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.convocationrightside .convocationarchive {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationarchive h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.convocationrightside .convocationarchive .sidebararchive {
+  list-style: none;
+  float: left;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+}
+
+.convocationrightside .convocationarchive .sidebararchive li {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.convocationrightside .convocationarchive .sidebararchive li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.convocationrightside .convocationarchive .sidebararchive li a {
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #333333;
+  padding: 12px 10px;
+  display: block;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.convocationrightside .convocationarchive .sidebararchive li a:hover {
+  color: #2f2f2f;
+  padding: 12px 15px;
+  background: #f3f2f2;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  color: #e97800;
+}
+
+.convocationrightside .convocationarchive .sidebararchive li a:hover i {
+  color: #e97800;
+}
+
+.convocationrightside .convocationarchive .sidebararchive li a i {
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+.convocationrightside .convocationarchiverecentposts {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationarchiverecentposts h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost {
+  list-style: none;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li:last-child {
+  margin-bottom: 0;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li:hover .reposttext h6 a {
+  color: #e97800;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li:hover .archiveimg span {
+  opacity: 1;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li:hover .archiveimg::after {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  opacity: 0.7;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  background-color: #e97800;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .archiveimg {
+  position: relative;
+  width: 130px;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .archiveimg::after {
+  content: "";
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+  position: absolute;
+  opacity: 0;
+  background-color: #e97800;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .archiveimg span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: -9px auto 0;
+  text-align: center;
+  opacity: 0;
+  line-height: 20px;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .archiveimg span a {
+  font-size: 16px;
+  display: inline-block;
+  color: #fff;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .archiveimg span a i {
+  position: relative;
+  z-index: 4;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .reposttext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .reposttext h6 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .reposttext h6 a {
+  width: auto;
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .reposttext span {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  color: #999999;
+}
+
+.convocationrightside .convocationarchiverecentposts .sidebarrepost li .reposttext span i {
+  font-style: normal;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.convocationrightside .convocationcategories {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationcategories ul {
+  float: left;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.convocationrightside .convocationcategories ul li {
+  float: left;
+  width: 100%;
+}
+
+.convocationrightside .convocationcategories ul li:last-child {
+  margin-bottom: -2px;
+}
+
+.convocationrightside .convocationcategories ul li a {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+  padding: 8px 0px;
+  display: block;
+  line-height: normal;
+  text-decoration: none;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.convocationrightside .convocationcategories ul li a:hover {
+  padding: 8px 10px;
+  background: #e97800;
+  color: #fff;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.convocationrightside .convocationcategories ul li a i {
+  margin-right: 10px;
+}
+
+.convocationrightside .convocationcourseslist {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationcourseslist h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.convocationrightside .convocationcourseslist ul {
+  list-style: none;
+  margin: 0px 0px 0px -6px;
+}
+
+.convocationrightside .convocationcourseslist ul li {
+  margin: 0 0px 6px 5px;
+  float: left;
+  width: 97px;
+}
+
+.convocationrightside .convocationcourseslist ul li:hover div a {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  opacity: 0.9;
+}
+
+.convocationrightside .convocationcourseslist ul li div {
+  width: 100%;
+  position: relative;
+}
+
+.convocationrightside .convocationcourseslist ul li div img {
+  width: 100%;
+  height: auto;
+}
+
+.convocationrightside .convocationcourseslist ul li div a {
+  font-size: 14px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+  display: block;
+  line-height: 88px;
+  text-decoration: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #e97800;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  text-align: center;
+}
+
+.convocationrightside .convocationtagcloud {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #CCC;
+}
+
+.convocationrightside .convocationtagcloud h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0px 0px 15px 0px;
+}
+
+.convocationrightside .convocationtagcloud ul {
+  list-style: none;
+  margin: -5px 0px 0px -5px;
+}
+
+.convocationrightside .convocationtagcloud ul li {
+  float: left;
+  margin: 0 0 5px 5px;
+}
+
+.convocationrightside .convocationtagcloud ul li a {
+  border: 1px solid #dcdcdc;
+  color: #777;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.convocationrightside .convocationtagcloud ul li a:hover {
+  background-color: #e97800;
+  color: #fff;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+/*# sourceMappingURL=eventdetails.css.map */

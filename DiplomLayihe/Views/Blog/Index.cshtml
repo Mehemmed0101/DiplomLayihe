@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BlogPosts>
+
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bannermain">
+                        <div class="bannerleft">
+                            <h3>BLOG</h3>
+                        </div>
+
+                        <div class="bannerright">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><i class="fa-solid fa-angle-right"></i></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-6">
+                    <div class="blogpost">
+                        <ul class="blogpostsidebar">
+                            <li>
+                                <a href="#">
+                                    14
+                                    <span>nov</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-comments"></i>
+                                    <span>69</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <span>101</span>
+                                </a>
+                            </li>
+                        </ul>
+                            <div class="blogpostmain">
+                                <div class="blogpostimg">
+                                    <img src="~/photouploads/images/@item.BlogPhoto" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <ul>
+                                    <li><a href="#">Jonathan Doe</a>1 week ago</li>
+                                    <li><a href="#"><i class="fa fa-link"></i></a>169</li>
+                                </ul>
+                                <h5>@item.Title</h5>
+                                <p>@item.p1.HtmlToPlainText().ToEllipse(200)</p>
+                                <a class="readmore" asp-action="details" asp-route-id="@item.Id">
+                                    read more
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                }
+
+                
+
+
+            </div>
+        </div>
+    </section>

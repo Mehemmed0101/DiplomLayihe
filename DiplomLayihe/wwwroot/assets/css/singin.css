@@ -1,0 +1,133 @@
+main .signin {
+  margin: 40px 0px;
+}
+
+main .signin .signinheading {
+  width: 100%;
+  text-align: center;
+  margin: -7px 0 30px 0;
+}
+
+main .signin .signinheading h2 {
+  text-trans.signinform: uppercase;
+  font-weight: normal;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main .signin .signinheading h2::before {
+  content: "";
+  left: 200;
+  bottom: 0;
+  height: 2px;
+  width: 25px;
+  background-color: #666666;
+  position: absolute;
+}
+
+main .signin .signinheading h2::after {
+  content: "";
+  right: 200;
+  bottom: 1px;
+  height: 1px;
+  width: 50px;
+  background-color: #bbbbbb;
+  position: absolute;
+}
+
+main .signinform {
+  border: 1px solid #e7e6e5;
+  padding: 60px 50px;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(67, 54, 47, 0.3);
+          box-shadow: 0px 20px 50px 0px rgba(67, 54, 47, 0.3);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .signinform .inputarea {
+  max-width: 600px;
+  min-width: 450px;
+}
+
+main .signinform .inputarea input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #d6d5d5;
+  padding: 12px 10px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+main .signinform .inputarea input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+main .signinform .inputarea input:-ms-input-placeholder {
+  color: #fff;
+}
+
+main .signinform .inputarea input::-ms-input-placeholder {
+  color: #fff;
+}
+
+main .signinform .inputarea input::placeholder {
+  color: #fff;
+}
+
+main .signinform .inputarea input:focus {
+  border-color: #fff !important;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(86, 35, 5, 0.3);
+          box-shadow: 0px 0px 5px 0px rgba(86, 35, 5, 0.3);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .signinform .inputarea label {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+    main .signinform button {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #d6d5d5;
+        border-radius: 10px;
+        background-color: #666666;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+main .signinform button:hover {
+  background-color: #e79800;
+  color: #fff;
+}
+
+@media only screen and (max-width: 767px) {
+    .inputarea{
+        min-width: 0px !important;
+        width: auto !important;
+    }
+}
+        /*# sourceMappingURL=singin.css.map */

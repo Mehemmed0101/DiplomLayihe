@@ -1,0 +1,384 @@
+﻿@model BlogPosts
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>BLOG DETAIL</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Blog Detail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="blogdetails">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blogdetailwrap">
+                    <div class="blogdetailmainimg">
+                        <div class="blogimg">
+                            <img src="~/photouploads/images/@Model.BlogPhoto" alt="" />
+                            <span><a href="#">education</a></span>
+                        </div>
+                    </div>
+
+
+                    <div class="blogdetailmiddle">
+                        <div class="blogdtlheading">
+                            <h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h5>
+                        </div>
+
+                        <ul class="blogdtlstatistic">
+                            <li><i class="fa fa-calendar"></i><a href="#">31 Dec, 2015</a></li>
+                            <li><i class="fa-solid fa-heart"></i><a href="#">69 Likes</a></li>
+                            <li><i class="fa-solid fa-comments"></i><a href="#">27 Comments</a></li>
+                        </ul>
+
+                        <p>@Model.p1 </p>
+                        <p class="pmargin">@Model.p2</p>
+
+
+                        <div class="middlep">
+                            <p>@Model.SpecialText</p>
+                        </div>
+
+
+                        <p class="pmargin">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. </p>
+
+                        <div class="blogextraimages">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 ">
+                                    <div class="extraimgs">
+                                        <img src="~/images/extra-images/blog_detail1.jpg" alt="" />
+                                        <span><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="pmargin">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
+                    </div>
+
+
+                    <div class="blogauthor">
+                        <div class="authorimg"><img src="~/images/extra-images/author.jpg" alt=""></div>
+                        <div class="blogaboutauthor">
+                            <h6>
+                                <a href="#">Alfred Marshal</a>
+                            </h6>
+                            <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum quis bibendum.</p>
+                            <ul class="blogauthorsocial">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="sectioncomment">
+                        <div class="commentheading">
+                            <h5>@ViewBag.Comments.Count Comments</h5>
+                        </div>
+
+                        <ul class="commentul">
+
+                            @foreach (var item in ViewBag.Comments)
+                            {
+                                if (item.ReplyId == null)
+                                {
+                                    <li>
+                                        <div class="commentcard">
+                                            <div class="commentimg"><img src="~/images/extra-images/comment-3.jpg" alt="" /></div>
+                                            <div style="width: 100% !important;" class="commentmain">
+                                                <div style="width: 100% !important;" class="commentmainhead">
+                                                    <div class="commentabout"><a href="#">@item.Name</a><span>@item.CreatedDate</span></div>
+                                                    <a id="reply" class="commentreply"><i class="fa fa-mail-reply"></i>Reply</a>
+                                                    <input style="display: none;" class="replyid" value="@item.Id" />
+                                                    <input style="display: none;" class="replyName" value="@item.Name" />
+                                                </div>
+                                                <p>@item.Comment</p>
+                                            </div>
+                                        </div>
+                                        <ul class="replyul">
+                                            @foreach (var reply in ViewBag.Comments)
+                                            {
+                                                @if (item.Id == reply.ReplyId)
+                                                {
+
+                                                    <li>
+                                                        <div class="commentcard">
+                                                            <div class="commentimg"><img src="~/images/extra-images/comment-3.jpg" alt="" /></div>
+                                                            <div style="width: 100% !important;" class="commentmain">
+                                                                <div style="width: 100% !important;" class="commentmainhead">
+                                                                    <div class="commentabout"><a>@reply.Name</a><span>@reply.CreatedDate</span></div>
+                                                                    <a id="reply" class="commentreply"><i class="fa fa-mail-reply"></i>Reply</a>
+                                                                    <input style="display: none;" class="replyid" value="@reply.Id" />
+                                                                    <input style="display: none;" class="replyName" value="@reply.Name" />
+                                                                </div>
+                                                                <p>@reply.Comment</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="commentul">
+                                                            @foreach (var reply2 in ViewBag.Comments)
+                                                            {
+                                                                @if (reply.Id == reply2.ReplyId)
+                                                                {
+                                                                    <li>
+                                                                        <div class="commentcard">
+                                                                            <div class="commentimg"><img src="~/images/extra-images/comment-3.jpg" alt="" /></div>
+                                                                            <div style="width: 100% !important;" class="commentmain">
+                                                                                <div style="width: 100% !important;" class="commentmainhead">
+                                                                                    <div class="commentabout"><a>@reply2.Name</a><span>@reply2.CreatedDate</span></div>
+                                                                                    <a id="reply" class="commentreply"><i class="fa fa-mail-reply"></i>Reply</a>
+                                                                                    <input style="display: none;" class="replyid" value="@reply2.Id" />
+                                                                                    <input style="display: none;" class="replyName" value="@reply2.Name" />
+                                                                                </div>
+                                                                                <p>@reply2.Comment</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                }
+
+
+                                                            }
+                                                        </ul>
+                                                    </li>
+
+                                                }
+                                            }
+                                        </ul>
+
+
+                                    </li>
+                                }
+                            }
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="blogform">
+                        <div class="blogformheading">
+                            <h5>Leave A Message</h5>
+                            <h3 id="replywrite"></h3>
+                        </div>
+                        <form method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input id="name" style="color: black; background-color: white !important; border: 1px solid #d8d8d8;" type="text" placeholder="Name">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <input id="email" style="color: black; background-color: white !important; border: 1px solid #d8d8d8; " type="email" placeholder="E-mail">
+                                    <input id="id" style="display: none;" value="@Model.Id">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea id="message" style="color: black;" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <input type="submit" style="color: white !important;" value="Send Comment" id="submit"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="convocationrightside">
+                    <div class="convocationsearch">
+                        <h2>Search Course</h2>
+                        <form>
+                            <input type="search" placeholder="Keyword...">
+                        </form>
+                    </div>
+
+                    <div class="convocationarchive">
+                        <h2>Archives</h2>
+                        <ul class="sidebararchive">
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>January</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>February</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>March</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>April</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>May</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationarchiverecentposts">
+                        <h2>Recent Posts</h2>
+                        <ul class="sidebarrepost">
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationcategories">
+                        <h2>categories</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Business &amp; Economics</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Politics &amp; History</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Medical Sciences &amp; Health</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Fine Arts</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Tourism &amp; Culture</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Sports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="convocationcourseslist">
+                        <h2>Latest Courses</h2>
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationtagcloud">
+                        <h2>Tags Cloud</h2>
+                        <ul>
+                            @foreach (var tags in Model.TagCloud)
+                            {
+                                <li><a href="#">@tags.PostTag.Name</a></li>
+                            }
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        var submit = document.getElementById("submit")
+        var replyid;
+
+        submit.addEventListener("click", function (e) {
+            e.preventDefault()
+            var id = document.getElementById("id").value;
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value
+            var message = document.getElementById("message").value
+
+
+            $.ajax({
+                url: "@Url.Action("creatingcomment")",
+                data: {
+                    id: id,
+                    name: name,
+                    email: email,
+                    message: message,
+                    replyid: replyid
+                },
+
+
+                dataType: "json",
+                type: "post",
+                success: function (data) {
+                    if (data.status == 200) {
+                        location.reload(true)
+                    }
+                }
+
+            })
+        })
+
+        $("a").click(function () {
+            var replyname = $(this).parent().children(".replyName").val();
+            if (replyname != undefined) {
+                document.getElementById("replywrite").innerHTML = `${replyname} Cavab verirsiniz`;
+            }
+
+            replyid = $(this).parent().children(".replyid").val();
+        })
+    </script>
+}

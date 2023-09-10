@@ -1,0 +1,415 @@
+.coursedetails {
+  width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
+
+.coursedetails .coursesdetailcontainer .coursesdetailheading {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.coursedetails .coursesdetailcontainer .coursesdetailheading h4 {
+  font-weight: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0px 0 0px 0;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailfonts {
+  float: left;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailfonts li {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+  margin-right: 28px;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailfonts li i {
+  margin-right: 9px;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailfonts li a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #999;
+  text-decoration: none;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailimg {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailimg .detailimg {
+  position: relative;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailimg .detailimg::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  border: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+.coursedetails .coursesdetailcontainer .coursedetailimg .detailimg img {
+  width: 100%;
+  height: auto;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .tab {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  height: 50px;
+  width: auto;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #666;
+  cursor: pointer;
+  padding: 15px 20px;
+  margin: 0;
+  background-color: #fff;
+  border: none;
+  text-decoration: none;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .whiteborder {
+  position: relative;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .whiteborder::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e79800;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .tabContent {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: -1px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .hide {
+  display: none;
+}
+
+.coursedetails .coursesdetailcontainer #tabs .show {
+  display: block;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabdetail {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  padding-bottom: 0px;
+  margin-bottom: 30px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabdetail .coursetabheading {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabdetail .coursetabheading h3 {
+  font-weight: normal;
+  margin: 0px 0px 0px 0px;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabdetail p {
+  color: #777777;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable h6 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable p {
+  color: #777777;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 28px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable {
+  width: 100%;
+  height: auto;
+  margin-bottom: 46px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable thead {
+  padding: 12px 16px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable thead tr {
+  padding: 12px 16px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable thead tr th {
+  padding: 12px 16px;
+  border: 1px solid #ccc !important;
+  background-color: #ddd;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable tbody {
+  padding: 12px 16px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable tbody tr {
+  padding: 12px 16px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabtable .coursetable tbody tr td {
+  border: 1px solid #ccc !important;
+  font-size: 16px;
+  color: #777;
+  font-weight: lighter;
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabwriting {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabwriting h6 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabwriting p {
+  color: #777777;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 28px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetabwriting p b {
+  color: black;
+  font-weight: bold;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetablast {
+  float: left;
+  width: 100%;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetablast h6 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .tabContent .coursetablast p {
+  color: #777777;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 28px;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery {
+  float: left;
+  width: 100%;
+  margin-bottom: 23px;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursegalleryheading {
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  margin-bottom: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursegalleryheading h6 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery p {
+  color: #777777;
+  font-weight: lighter;
+  margin-top: 28px;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg:hover a {
+  opacity: 0.8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg:hover::after {
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  opacity: 0.8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg::after {
+  position: absolute;
+  content: "";
+  left: 10%;
+  bottom: 10%;
+  top: 10%;
+  right: 10%;
+  background-color: #e79800;
+  opacity: 0;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg img {
+  width: 100%;
+}
+
+.coursedetails .coursesdetailcontainer .coursegallery .coursecardimg a {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 50%;
+  margin: -25px auto 0;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  opacity: 0;
+  color: #fff;
+  line-height: 46px;
+  z-index: 4;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 20px 15px 13px 20px;
+  margin-bottom: 40px;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .authorimg {
+  margin: 0px;
+  width: 128px;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .authorimg img {
+  width: 128px;
+  height: auto;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor {
+  float: none;
+  overflow: hidden;
+  padding: 0px 20px;
+  text-align: left;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor h6 {
+  margin: -3px 0 9px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor h6 a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor p {
+  color: #777777;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor .blogauthorsocial {
+  float: right;
+  text-align: right;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor .blogauthorsocial li {
+  float: left;
+  margin-left: 20px;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor .blogauthorsocial li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #666;
+}
+
+.coursedetails .coursesdetailcontainer .blogauthor .blogaboutauthor .blogauthorsocial li a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #e79800;
+}
+/*# sourceMappingURL=coursedetails.css.map */

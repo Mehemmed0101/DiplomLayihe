@@ -1,0 +1,165 @@
+﻿@model DiplomUser
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@section css{
+    <link href="~/admin/assets/css/Tab-control.css" rel="stylesheet" />
+}
+
+
+<h1>Users</h1>
+
+<div>
+    <h4>Users</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailConfirmed)
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.EmailConfirmed == true)
+            {
+                <a style="color: yellowgreen;">Email Confirmed</a>
+            }
+            else
+            {
+                <a style="color: red;">Email Not Confirmed</a>
+            }
+        </dd>
+    </dl>
+</div>
+
+
+
+<div>
+    <div class="tab">
+        <button class="tablinks active" onclick="openCity(event, 'rollar')">Rollar</button>
+        <button class="tablinks" onclick="openCity(event, 'selahiyyetler')">Səlahiyyətlər</button>
+    </div>
+
+    <div id="rollar" class="tabcontent">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th style="max-width:150px;">
+
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Tuple<int, string, bool> item in ViewBag.Roles)
+                {
+                    <tr>
+                        <td style="max-width:150px;">
+                            <input style="cursor:pointer;"
+                                   type="checkbox"
+                                   @(item.Item3 ? "checked" : "")
+                                   data-role-id="@item.Item1"
+                                   data-user-id="@Model.Id" />
+                        </td>
+                        <td>
+                            @item.Item2
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+@section js{
+    <script src="~/admin/assets/js/Tab-control.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('input[type="checkbox"][data-role-id]').change(function (e) {
+
+                let obj = $(e.currentTarget).data();
+
+                obj.selected = $(e.currentTarget).is(':checked');
+
+                $.ajax({
+
+                    url: '@Url.Action("setrole")',
+                    type: 'POST',
+                    data: obj,
+                    contentType: 'application/x-www-form-urlencoded',
+                    dataType: 'json',
+                    success: function (response) {
+                        toastr.success(response.message,'Ugurludur!');
+                    },
+                    error: function (response) {
+                        toastr.error(response.message, 'Xeta!');
+                    }
+
+                })
+
+            })
+
+        })
+    </script>
+
+
+
+    @*<script>
+        $(document).ready(function () {
+
+            $('input[type="checkbox"][data-principal-name]').change(function (e) {
+
+                let obj = $(e.currentTarget).data();
+
+                obj.selected = $(e.currentTarget).is(':checked');
+
+                console.log(obj);
+
+                $.ajax({
+
+                    url: '@Url.Action("setprincipal")',
+                    type: 'POST',
+                    data: obj,
+                    contentType: 'application/x-www-form-urlencoded',
+                    dataType: 'json',
+                    success: function (response) {
+                        toastr.success(response.message,'Ugurludur!');
+                    },
+                    error: function (response) {
+                        toastr.error(response.message, 'Xeta!');
+                    }
+
+                })
+
+            })
+
+        })
+    </script>*@
+}

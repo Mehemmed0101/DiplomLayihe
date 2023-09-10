@@ -1,0 +1,458 @@
+.teacherportfolio {
+  margin: 70px 0px;
+}
+
+.teacherportfolio .teacherbio {
+  float: left;
+  width: 100%;
+}
+
+.teacherportfolio .teacherbio .teacherlogo {
+  float: left;
+  border: 1px solid #e79800;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.teacherportfolio .teacherbio .teacherlogo span {
+  background-color: #e79800;
+  float: left;
+  font-size: 36px;
+  padding: 16px;
+  text-align: center;
+}
+
+.teacherportfolio .teacherbio .teacherlogo span i {
+  color: #fff;
+}
+
+.teacherportfolio .teacherbio .teacherlogo h3 {
+  text-transform: uppercase;
+  float: left;
+  line-height: normal;
+  font-weight: bolder;
+  padding: 15px 25px 12px;
+}
+
+.teacherportfolio .teacherbio .teacherwriting {
+  float: left;
+  width: 100%;
+}
+
+.teacherportfolio .teacherbio .teacherwriting h4 {
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.teacherportfolio .teacherbio .teacherwriting ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.teacherportfolio .teacherbio .teacherwriting ul li {
+  float: left;
+  font-size: 16px;
+  color: #666;
+  font-weight: normal;
+  margin-right: 30px;
+}
+
+.teacherportfolio .teacherbio .teacherwriting ul a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+  text-decoration: none;
+}
+
+.teacherportfolio .teacherbio .teacherwriting ul i {
+  color: #e79800;
+  margin-right: 8px;
+}
+
+.teacherportfolio .teacherbio p {
+  color: #777777;
+  margin: 0px;
+}
+
+.teacherportfolio .teacherbio .pwithmargin {
+  color: #777777;
+  margin: 0px 0px 10px;
+}
+
+.teacherportfolio .teachercontact {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.teacherportfolio .teachercontact .teacherimg::after {
+  content: "";
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  position: absolute;
+  border: 1px solid #e79800;
+}
+
+.teacherportfolio .teachercontact .teacherimg img {
+  width: 100%;
+  height: auto;
+}
+
+.teacherportfolio .teachercontact .teacherimg span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  bottom: 16px;
+  z-index: 9999;
+}
+
+.teacherportfolio .teachercontact .teacherimg span ul {
+  display: inline-block;
+  margin: auto;
+}
+
+.teacherportfolio .teachercontact .teacherimg span ul li {
+  margin-bottom: 10px;
+  float: left;
+}
+
+.teacherportfolio .teachercontact .teacherimg span ul li a {
+  width: 41px;
+  height: 41px;
+  display: block;
+  text-align: center;
+  background-color: #e79800;
+  color: #fff;
+  font-size: 16px;
+  line-height: 41px;
+  margin: 0 3px;
+  text-decoration: none;
+}
+
+.teacherportfolio .teachercontact .teacherimg span ul li a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+.teacherskills {
+  margin: 70px 0px;
+  border: 1px solid #e2e2e2;
+}
+
+.teacherskills .skillimg {
+  width: 100%;
+  height: auto;
+}
+
+.teacherskills .skillimg img {
+  width: 100%;
+  height: auto;
+}
+
+.teacherskills .skillstatistics {
+  float: left;
+  width: 100%;
+  padding: 50px 50px 30px 20px;
+}
+
+.teacherskills .skillstatistics .skillsheading {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: -5px 0 35px 0;
+  padding: 0  0 4px 0;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+.teacherskills .skillstatistics .skillsheading::before {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  position: absolute;
+  height: 2px;
+  width: 40px;
+}
+
+.teacherskills .skillstatistics .skillsheading h4 {
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.teacherskills .skillstatistics .skillsname {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.teacherskills .skillstatistics .skillsname span {
+  font-weight: normal;
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 13px;
+  float: left;
+  line-height: normal;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar {
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 14px;
+  padding: 0;
+  margin: 0 auto 0px;
+  background-color: #e2e2e2;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .bar1 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: #e79800;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .bar2 {
+  position: absolute;
+  display: block;
+  width: 75%;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: #e79800;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .bar3 {
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: #e79800;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .bar4 {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 16px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  background-color: #e79800;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .label {
+  background: transparent;
+  color: #666666;
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  height: 30px;
+  line-height: 30px;
+  margin-left: -39px;
+  position: absolute;
+  text-align: center;
+  top: -35px;
+  padding: 0;
+  left: 100% !important;
+}
+
+.teacherskills .skillstatistics .skillsname .statisticbar .label span {
+  position: absolute;
+  display: block;
+  top: 0px;
+  right: -35px;
+  background: transparent;
+}
+
+.teacherskills .teachertraining {
+  margin: 40px;
+}
+
+.teacherskills .teachertraining .trainingheading {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: -5px 0 50px 0;
+  padding: 0  0 10px 0;
+  border-bottom: 2px solid #e2e2e2;
+  text-align: center;
+}
+
+.teacherskills .teachertraining .trainingheading::before {
+  content: "";
+  left: 0;
+  right: 0;
+  background-color: #e79800;
+  bottom: -2px;
+  position: absolute;
+  height: 2px;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.teacherskills .teachertraining .trainingheading h4 {
+  font-weight: normal;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.teacherskills .teachertraining .trainingmain {
+  float: left;
+  width: 100%;
+}
+
+.teacherskills .teachertraining .trainingmain li {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 60px 0 0 0;
+}
+
+.teacherskills .teachertraining .trainingmain li:hover .trainingmiddle .trainingdate span {
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  border-radius: 0%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  background-color: #e79800;
+}
+
+.teacherskills .teachertraining .trainingmain li::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  width: 2px;
+  background-color: #e2e2e2;
+  height: 100%;
+  margin: auto;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle {
+  float: left;
+  width: 100%;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .divcircule {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin: -30px auto;
+  position: absolute;
+  width: 60px;
+  border: 2px solid #e2e2e2;
+  height: 60px;
+  line-height: 54px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  font-size: 17px;
+  text-align: center;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 0px;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .divcircule::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #e79800;
+  left: 19px;
+  right: 20px;
+  top: 19px;
+  bottom: 20px;
+  position: absolute;
+  z-index: 4;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingdate {
+  float: left;
+  width: 50%;
+  text-align: right;
+  padding: 12px 70px 0 0;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingdate span {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 8px 13px;
+  border: 2px solid #e79800;
+  border-radius: 3px;
+  font-weight: lighter;
+  color: #e79800;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting {
+  float: right;
+  width: 50%;
+  text-align: left;
+  padding: 9px 0 0 70px;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting h6 {
+  font-size: 16px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting h6 a {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting h6 a:hover {
+  color: #e79800;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting span {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 16px;
+  color: #e79800;
+}
+
+.teacherskills .teachertraining .trainingmain li .trainingmiddle .trainingwriting p {
+  color: #777777;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+/*# sourceMappingURL=teacherdetail.css.map */

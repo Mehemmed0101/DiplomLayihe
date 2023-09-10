@@ -1,0 +1,163 @@
+.contactform {
+  margin: 70px 0px;
+  width: 100%;
+  height: auto;
+}
+
+.contactform form {
+  height: auto;
+  width: 100%;
+}
+
+.contactform form .contactheading {
+  float: left;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.contactform form .contactheading h4 {
+  font-size: 24px;
+  font-weight: normal;
+  margin: -6px 0 16px 0;
+  text-transform: uppercase;
+}
+
+.contactform form .contactmain {
+  float: left;
+  width: 100%;
+}
+
+.contactform form .contactmain .contactinput {
+  float: left;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.contactform form .contactmain .contactinput span {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contactform form .contactmain .contactinput span i {
+  color: #e79800;
+  margin-right: 10px;
+}
+
+.contactform form .contactmain .contactinput input {
+  float: left;
+  width: 100%;
+  border: 1px solid #dedede;
+  padding: 3px 10px 5px 38px;
+  line-height: 34px;
+}
+
+.contactform form .contactmain .submitbutton {
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 14px;
+  background-color: #e79800;
+  border: 0px;
+  color: #fff;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contactform form .inputstextarea span {
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contactform form .inputstextarea span i {
+  color: #e79800;
+  margin-right: 10px;
+}
+
+.contactform form .inputstextarea textarea {
+  float: left;
+  width: 100%;
+  border: 1px solid #dedede;
+  padding: 3px 10px 5px 38px;
+  line-height: 34px;
+  min-height: 308px;
+  resize: none;
+}
+
+.contactform form .contactfonts {
+  float: left;
+  margin: -2px 0 27px;
+  width: 100%;
+}
+
+.contactform form .contactfonts li {
+  color: #7a7a7a;
+  float: left;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+  line-height: normal;
+}
+
+.contactform form .contactfonts li a {
+  color: #7a7a7a;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.contactform form .contactfonts li a:hover {
+  padding-left: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #e79800;
+}
+
+.contactform form .contactfonts li i {
+  margin-right: 10px;
+  color: #e79800;
+}
+
+.contactform form .contsocial {
+  float: left;
+  width: 100%;
+}
+
+.contactform form .contsocial li {
+  float: left;
+  margin-right: 10px;
+}
+
+.contactform form .contsocial li:hover {
+  background-color: #e79800;
+}
+
+.contactform form .contsocial li:hover a {
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border: 1px solid #e79800;
+}
+
+.contactform form .contsocial li a {
+  width: 37px;
+  border: 1px solid #999999;
+  color: #999999;
+  display: block;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+}
+/*# sourceMappingURL=contactus.css.map */

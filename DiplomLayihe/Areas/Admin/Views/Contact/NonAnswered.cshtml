@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Contact Questions</h1>
+<p>
+    <a class="btn btn-primary" asp-action="answered" style="color: white;">
+        Answered
+    </a>
+    <a class="btn btn-primary" asp-action="nonanswered" style="color: white;">
+        Not Answered
+    </a>
+    <a class="btn btn-primary" asp-action="index" style="color: white;">
+        All
+    </a>
+</p>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-entity-id="@item.Id">
+                            <td>@item.Name</td>
+                            <td>@item.Email.HtmlToPlainText().ToEllipse(20)</td>
+                            <td>@item.Comment.HtmlToPlainText().ToEllipse(15)</td>
+                            <td>@item.Answer.HtmlToPlainText().ToEllipse(15)</td>
+                            <td class="atributlar">
+                                <a asp-action="answer" asp-route-id="@item.Id">Answer</a> |
+                                <a asp-action="details" asp-route-id="@item.Id">Details</a> |
+
+                                <a onclick="removeEntity(event, @item.Id, '@item.Name')" class="btn">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

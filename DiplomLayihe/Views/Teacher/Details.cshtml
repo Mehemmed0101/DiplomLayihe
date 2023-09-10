@@ -1,0 +1,234 @@
+﻿@model Teachers
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>OUR TEACHER</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Our Teacher</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="teacherportfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-7">
+                <div class="teacherbio">
+                    <div class="teacherlogo">
+                        <span><i class="fa-solid fa-book-open"></i></span>
+                        <h3>Teacher Profile</h3>
+                    </div>
+
+                    <div class="teacherwriting">
+                        <h4>@Model.TeacherName</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-envelope"></i><a href="#">@Model.TeacherEmail</a></li>
+                            <li><i class="fa fa-calendar"></i>@Model.CreatedDate.ToString("MMM d, yyyy")</li>
+                            <li><i class="fa fa-phone"></i>@Model.TeacherNumber</li>
+                        </ul>
+                        <p>@Model.AboutTeacher</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-5">
+                <div class="teachercontact">
+                    <div class="teacherimg">
+                        <img src="~/photouploads/images/@Model.TeacherPhoto" alt="" />
+                        <span>
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-user-group"></i></span>
+                    <h3>94,532</h3>
+                    <h5>FOREIGN FOLLOWERS</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-book"></i></span>
+                    <h3>11,223</h3>
+                    <h5>CLASSES COMPLETE</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-trophy"></i></span>
+                    <h3>282,673</h3>
+                    <h5>STUDENTS ENROLLED</h5>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="countercard">
+                    <span><i class="fa-solid fa-person-chalkboard"></i></span>
+                    <h3>370</h3>
+                    <h5>CERTIFIED TEACHERS</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="teacherskills">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-7">
+                <div class="skillimg">
+                    <img src="~/images/extra-images/skill_thumb.jpg" alt="" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-5">
+
+                <div class="skillstatistics">
+                    <div class="skillsheading">
+                        <h4>Skills</h4>
+                    </div>
+
+                    <div class="skillsname">
+                        <span>French</span>
+                        <div class="statisticbar c1">
+                            <div class="bar1"><span></span></div>
+                            <div class="label"><span>100%</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsname">
+                        <span>Computer</span>
+                        <div class="statisticbar c2">
+                            <div class="bar2"><span></span></div>
+                            <div class="label"><span>75%</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsname">
+                        <span>Art</span>
+                        <div class="statisticbar c3">
+                            <div class="bar3"><span></span></div>
+                            <div class="label"><span>80%</span></div>
+                        </div>
+                    </div>
+
+                    <div class="skillsname">
+                        <span>Science</span>
+                        <div class="statisticbar c4">
+                            <div class="bar4"><span></span></div>
+                            <div class="label"><span>50%</span></div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="teachertraining">
+                    <div class="trainingheading">
+                        <h4>Education & Training</h4>
+                    </div>
+
+                    <ul class="trainingmain">
+                        <li>
+                            <div class="trainingmiddle">
+                                <div class="divcircule"></div>
+                                <div class="trainingdate">
+                                    <span>Nov 2011 - Present</span>
+                                </div>
+                                <div class="trainingwriting">
+                                    <h6><a href="#">Lorem Ipsum</a></h6>
+                                    <span>Web Design</span>
+                                    <p>Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="testimonialheading">
+                    <h3>Our Testimonial</h3>
+                </div>
+            </div>
+
+
+            <div class="testimonialmain">
+
+                <div class="testimonialcards">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="testimonialwrap">
+                                <div class="testimonialimg">
+                                    <img src="~/images/extra-images/testemonial.1.jpg" alt="">
+                                </div>
+                                <div class="testimonialtext">
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.aenean sollicitudin, lorem quis bibendum auctor...</p>
+                                    <a href="#">John Doe<span>- Happy Student</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="testimonialwrap">
+                                <div class="testimonialimg">
+                                    <img src="~/images/extra-images/testemonial.1.jpg" alt="">
+                                </div>
+                                <div class="testimonialtext">
+                                    <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.aenean sollicitudin, lorem quis bibendum auctor...</p>
+                                    <a href="#">John Doe<span>- Happy Student</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

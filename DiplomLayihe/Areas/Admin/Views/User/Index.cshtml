@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DiplomUser>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Users</h1>
+<p>
+    <a class="createbtn" asp-action="register" style="color: white;">
+        New Admin
+    </a>
+</p>
+
+@section css {
+    <style>
+        .image {
+            width: 120px;
+            height: auto;
+        }
+    </style>
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @if (item.ProfileImg != null)
+                                {
+                                    <img class="image" src="~/photouploads/images/@item.ProfileImg" />
+                                }
+                            </td>
+                            <td>
+                                @item.UserName.HtmlToPlainText().ToEllipse(8)
+                            </td>
+                            <td>
+                                @item.Name
+                            </td>
+                            <td>
+                                @item.Surname.HtmlToPlainText().ToEllipse(8)
+                            </td>
+                            <td>
+                                @item.PhoneNumber
+                            </td>
+                            <td>
+                                @item.Email.HtmlToPlainText().ToEllipse(8)
+                            </td>
+                            <td class="atributlar">
+                                <a asp-action="Details" asp-route-id="@item.Id" class="detailbtn">Details</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

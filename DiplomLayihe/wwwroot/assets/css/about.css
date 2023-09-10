@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+main .banner {
+  float: inherit;
+  margin-top: 120px;
+  width: 100%;
+  text-align: left;
+  padding: 51px 0 54px;
+  background-image: url(/images/inrbg.jpg);
+  background-size: cover;
+  background-origin: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+  background-position: center;
+}
+
+main .banner::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: #000000;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+main .banner .bannermain {
+  float: left;
+  width: 100%;
+  text-align: left;
+}
+
+main .banner .bannermain .bannerleft {
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+
+main .banner .bannermain .bannerleft h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+main .banner .bannermain .bannerright {
+  float: right;
+  text-align: right;
+  width: 50%;
+  padding: 12.5px 0 6px;
+  line-height: 14px;
+}
+
+main .banner .bannermain .bannerright ul li {
+  display: inline-block;
+  position: relative;
+  padding: 0px 10px;
+  color: #fff;
+}
+
+main .banner .bannermain .bannerright ul li a {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 0 7px;
+  display: block;
+  line-height: 14px;
+  text-decoration: none;
+}
+
+main .aboutuni {
+  margin: 50px 0px;
+}
+
+main .aboutuni .uniwrap {
+  float: left;
+  width: 100%;
+}
+
+main .aboutuni .uniwrap .aboutuniheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin: -7px 0 30px 0;
+}
+
+main .aboutuni .uniwrap .aboutuniheading h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main .aboutuni .uniwrap .aboutuniheading h3::before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 25px;
+  background-color: #666666;
+  position: absolute;
+}
+
+main .aboutuni .uniwrap .aboutuniheading h3::after {
+  content: "";
+  left: 35px;
+  bottom: 1px;
+  height: 1px;
+  width: 50px;
+  background-color: #bbbbbb;
+  position: absolute;
+}
+
+main .aboutuni .uniwrap .aboutuniwriting {
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding: 0 0 0;
+}
+
+main .aboutuni .uniwrap .aboutuniwriting span {
+  font-size: 18px;
+  color: #c6c5c5;
+  margin: -7px 0 21px;
+  display: block;
+}
+
+main .aboutuni .uniwrap .aboutuniwriting p {
+  color: #c6c5c5;
+  margin-bottom: 20px;
+}
+
+main .aboutuni .uniwrap .aboutuniwriting a {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid;
+  border-radius: 0;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 34px;
+  line-height: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #e79800;
+  color: #e79800;
+}
+
+main .aboutuni .uniwrap .aboutuniwriting a:hover {
+  background: #e79800;
+  color: #fff;
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+}
+
+main .aboutuni .aboutuniimg {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+main .aboutuni .aboutuniimg .uniimage::before {
+  position: absolute;
+  content: "";
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  background-color: transparent;
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+main .aboutuni .aboutuniimg .uniimage img {
+  width: 100%;
+  height: auto;
+}
+
+main .sectionwelcome .welcomeabtrightside {
+  float: right;
+  width: 100%;
+  padding: 40px 0px;
+  margin: 0px 0px 0px 100px;
+}
+
+main .sectionwelcome .welcomeabtrightside .headinabtgwrite {
+  float: left;
+  width: 100%;
+  text-align: center;
+  margin: -8px 0 0px 0;
+}
+
+main .sectionwelcome .welcomeabtrightside .headinabtgwrite h3 {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main .sectionwelcome .welcomeabtrightside .headinabtgwrite h3:before {
+  background-color: #666666;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 49px;
+  width: 25px;
+}
+
+main .sectionwelcome .welcomeabtrightside .headinabtgwrite h3:after {
+  background-color: #bbbbbb;
+  bottom: 1px;
+  content: "";
+  height: 1px;
+  left: 49px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 50px;
+}
+
+main .sectionwelcome .welcomeabtcart {
+  float: left;
+  width: 100%;
+}
+
+main .sectionwelcome .welcomeabtcart:hover .welcomeabtwritings span {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  color: #e79800;
+}
+
+main .sectionwelcome .welcomeabtcart:hover .welcomeabtwritings h6, main .sectionwelcome .welcomeabtcart:hover .welcomeabtwritings a {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
+  color: #e79800;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings {
+  float: left;
+  width: 100%;
+  padding: 0px 15px;
+  text-align: center;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 83px;
+  height: 83px;
+  border-radius: 100%;
+  font-size: 32px;
+  background-color: #fff;
+  color: #666666;
+  margin: 0 0 26px 0;
+  border: solid 1px #ddd;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings span i {
+  margin: auto;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings h6 {
+  font-weight: normal;
+  margin-bottom: 18px;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings p {
+  margin: 0 0 19px 0;
+}
+
+main .sectionwelcome .welcomeabtcart .welcomeabtwritings a {
+  display: inline-block;
+  font-weight: bold;
+  color: #666666;
+  text-transform: capitalize;
+  margin-bottom: 45px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+main .studentssay {
+  background-image: url(/images/extra-images/student.jpg);
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .studentssay:before {
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+main .studentssay .studentcomment {
+  width: 100%;
+}
+
+main .studentssay .studentcomment .studentleft {
+  padding: 140px 0px 0px;
+}
+
+main .studentssay .studentcomment .studentleft p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 47px;
+  float: left;
+  position: relative;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingheading {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin: -7px 0 30px 0;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingheading h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+  position: relative;
+  padding-bottom: 15px;
+  color: #FFFFFF;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingheading h3::before {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 25px;
+  background-color: #666666;
+  position: absolute;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingheading h3::after {
+  content: "";
+  left: 35px;
+  bottom: 1px;
+  height: 1px;
+  width: 50px;
+  background-color: #bbbbbb;
+  position: absolute;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingmain {
+  display: inline-block;
+  float: left;
+  margin-top: -5px;
+  padding: 0 0 0 60px;
+  position: relative;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingmain i {
+  font-size: 55px;
+  color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  z-index: 4;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingmain a {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+main .studentssay .studentcomment .studentleft .studentwritingmain span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #999999;
+}
+
+main .studentssay .studentimages {
+  float: left;
+  width: 100%;
+  margin-bottom: -30px;
+  padding: 30px 0px;
+}
+
+main .studentssay .studentimages a {
+  border: 1px solid #fff;
+  float: left;
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 4;
+}
+
+main .studentssay .studentimages a img {
+  border: 1px solid #fff;
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 4;
+}
+/*# sourceMappingURL=about.css.map */

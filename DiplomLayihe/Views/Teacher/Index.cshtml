@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Teachers>
+
+
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>OUR TEACHER</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Our Teacher</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="facultymember">
+    <div class="container">
+        <div class="row">
+            <div class="divformargin1"></div>
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="facultywrap">
+                        <div class="facultycard">
+                            <div class="aboutmember">
+                                <div class="memberimg">
+                                    <img src="~/photouploads/images/@item.TeacherPhoto" alt="">
+                                    <div class="memberlinks">
+                                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                                    </div>
+                                </div>
+                                <div class="memberwritings">
+                                    <h6><a asp-action="details" asp-route-id="@item.Id">@item.TeacherName</a></h6>
+                                    <b>@item.TeacherLevel</b>
+                                    <p>@item.AboutTeacher.HtmlToPlainText().ToEllipse(50)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+
+
+
+            <div class="divformargin1"></div>
+        </div>
+    </div>
+</section>

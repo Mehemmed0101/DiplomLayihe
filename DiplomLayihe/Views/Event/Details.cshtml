@@ -1,0 +1,284 @@
+﻿@model EventViewModel
+
+
+<section class="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bannermain">
+                    <div class="bannerleft">
+                        <h3>Event Detail</h3>
+                    </div>
+
+                    <div class="bannerright">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><i class="fa-solid fa-angle-right"></i></li>
+                            <li><a href="#">Event Detail</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="eventall">
+
+                    @foreach (var item in Model.LastNewsandEvents)
+                    {
+                        <div class="convocationhead">
+                            <div class="convocationheadimg">
+                                <div class="item">
+                                    <div>
+                                        <img src="~/photouploads/images/@item.EventPhoto" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="convocationwrap">
+                            <h4><span>Convocation:</span> @item.Title</h4>
+                            <ul class="convocationtime">
+                                <li><i class="fa fa-calendar"></i>@item.CreatedDate.ToString("MM dd, yyyy")</li>
+                                <li><i class="fa fa-clock-o"></i>10:00 am - 04:00 pm</li>
+                            </ul>
+
+                            <div class="convocationwriting">
+                                <p>@item.MainText</p>
+
+                                <h5>Convocation Day information</h5>
+                                <p>@item.Explanation</p>
+                                <a href="#"><i class="fa fa-plus"></i>Google Calender</a>
+                                <a href="#"><i class="fa fa-plus"></i>Local Expert</a>
+
+                                <div class="convocationmap">
+                                    <div class="mapouter">
+                                        <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=750&amp;height=350&amp;hl=en&amp;q=Sahil&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.kokagames.com/fnf-friday-night-funkin-mods/"></a></div>
+                                        <style>
+                                            .mapouter {
+                                                position: relative;
+                                                text-align: right;
+                                                width: 100%;
+                                                height: 350px;
+                                            }
+
+                                            .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                                width: 100%;
+                                                height: 350px;
+                                            }
+
+                                            .gmap_iframe {
+                                                width: 100% !important;
+                                                height: 350px !important;
+                                            }
+                                        </style>
+                                    </div>
+                                    <a href="#">Details</a>
+                                    <a href="#">Organizer</a>
+                                    <a href="#">Venue</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    }
+
+
+
+
+
+
+                    <div class="convocationspkrs">
+                        <div class="convocationspkrsheading">
+                            <h4>
+                                <span>Event</span>
+                                Speakers
+                            </h4>
+                        </div>
+                        <div class="row">
+                            @foreach (var item in Model.EventSpeakers)
+                            {
+                                <div class="col-md-4 col-sm-4">
+                                    <div class="aboutspkrs">
+                                        <div>
+                                            <img src="~/photouploads/images/@item.SpeakersPhoto" alt="" />
+                                        </div>
+                                        <h5>
+                                            <a href="#">@item.SpeakersName</a>
+                                        </h5>
+                                        <p>@item.SpeakersWork</p>
+                                    </div>
+                                </div>
+                            }
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="convocationspkrsgallery">
+                        <div class="convocationgalleryheading">
+                            <h4><span>Event</span> Gallery</h4>
+                        </div>
+                        <ul class="allgallery">
+                            @foreach (var item in Model.EventGallery)
+                            {
+                                <li><a href="#"><img style="width:180px; height: 146px;" src="~/photouploads/images/@item.GalleryPhoto" alt="" /></a></li>
+                            }
+                        </ul>
+                        <a class="nextbtn" href="#">NEXT EVENT<i class="fa fa-angle-right"></i></a>
+                        <a class="prevbtn" href="#"><i class="fa fa-angle-left"></i>PREVIOUS EVENT</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-md-4">
+                <div class="convocationrightside">
+                    <div class="convocationsearch">
+                        <h2>Search Course</h2>
+                        <form>
+                            <input type="search" placeholder="Keyword...">
+                        </form>
+                    </div>
+
+                    <div class="convocationarchive">
+                        <h2>Archives</h2>
+                        <ul class="sidebararchive">
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>January</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>February</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>March</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>April</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-angle-right"></i>May</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationarchiverecentposts">
+                        <h2>Recent Posts</h2>
+                        <ul class="sidebarrepost">
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="archiveimg">
+                                    <img src="~/images/extra-images/archive-1.jpg" alt="">
+                                    <span><a href="#"><i class="fa fa-search-plus"></i></a></span>
+                                </div>
+                                <div class="reposttext">
+                                    <h6><a href="#">Lorem ipsum dolor sit amet sint occaecat cupidatat</a></h6>
+                                    <span><i class="fa fa-clock-o"></i>10 Jan, 2016</span>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationcategories">
+                        <h2>categories</h2>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Business &amp; Economics</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Politics &amp; History</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Medical Sciences &amp; Health</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Fine Arts</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Tourism &amp; Culture</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right"></i>Sports</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="convocationcourseslist">
+                        <h2>Latest Courses</h2>
+                        <ul>
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <img src="~/images/extra-images/courseslist1.jpg" alt="" />
+                                    <a href="#">View Detail</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="convocationtagcloud">
+                        <h2>Tags Cloud</h2>
+                        <ul>
+                            <li><a href="#">Science</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Fine Arts</a></li>
+                            <li><a href="#">Research</a></li>
+                            <li><a href="#">Admissions</a></li>
+                            <li><a href="#">PHD</a></li>
+                            <li><a href="#">History &amp; Politics</a></li>
+                            <li><a href="#">Sports</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

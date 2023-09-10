@@ -1,0 +1,97 @@
+﻿@model BlogPostEditCommand
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .photo-viewer {
+            width: 200px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-image: url('/photouploads/images/cloud-upload-a30f385a928e44e199a62210d578375a.jpg');
+            cursor: pointer;
+        }
+
+        #file {
+            display: none;
+        }
+
+        .tags {
+            min-height: 170px;
+        }
+
+            .tags > option {
+                background-color: white;
+            }
+    </style>
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <label for="file1" class="control-label">Sekil</label>
+            <div class="form-group">
+                <label class="photo-viewer control-label" id="file-viewer" for="file" style="background-image: url(/photouploads/images/@Model.BlogPhoto);"></label>
+                <input name="file" id="file" type="file" class="form-control" onchange="readFile(this)" />
+                <input type="hidden" asp-for="BlogPhoto" />
+                <span asp-validation-for="BlogPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="p1" class="control-label"></label>
+                <textarea asp-for="p1" class="form-control editor"></textarea>
+                <span asp-validation-for="p1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="p2" class="control-label"></label>
+                <textarea asp-for="p2" class="form-control editor"></textarea>
+                <span asp-validation-for="p2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpecialText" class="control-label"></label>
+                <textarea asp-for="SpecialText" class="form-control editor"></textarea>
+                <span asp-validation-for="SpecialText" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="display:flex; flex-direction:column;">
+                <label name="Tags" class="control-label">Tags</label>
+                <select class="tags" name="tagIds" multiple id="tags" asp-items="ViewBag.Tags">
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Id" />
+                <input class="editbtn" type="submit" value="Edit" />
+            </div>
+            <div>
+                <a class="btn btn-grd-inverse" asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section js {
+
+    <script>
+        $(document).ready(function () {
+
+            $('#tags').val([@string.Join(",",Model.TagCloud.Select(tc=>tc.PostTagId))]);
+
+        });
+
+    </script>
+}
+

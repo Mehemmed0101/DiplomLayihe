@@ -1,0 +1,50 @@
+﻿@model BlogPosts
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<h1>Details</h1>
+
+<div>
+    <h4>Blog Post</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BlogPhoto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BlogPhoto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SpecialText)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SpecialText)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="editbtn">Edit</a> |
+    <a class="btn btn-grd-inverse" asp-action="Index">Back to List</a>
+</div>

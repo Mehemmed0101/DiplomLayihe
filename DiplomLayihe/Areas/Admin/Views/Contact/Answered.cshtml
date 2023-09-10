@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ContactUs>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Contact Questions</h1>
+<p>
+    <a class="btn btn-primary" asp-action="answered" style="color: white;">
+        Answered
+    </a>
+    <a class="btn btn-primary" asp-action="nonanswered" style="color: white;">
+        Not Answered
+    </a>
+    <a class="btn btn-primary" asp-action="index" style="color: white;">
+        All
+    </a>
+</p>
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Answer</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-entity-id="@item.Id">
+                            <td id="name">@item.Name</td>
+                            <td id="email">@item.Email.HtmlToPlainText().ToEllipse(20)</td>
+                            <td id="comment">@item.Comment.HtmlToPlainText().ToEllipse(15)</td>
+                            <td id="answer">@item.Answer.HtmlToPlainText().ToEllipse(15)</td>
+                            <td class="atributlar">
+                                <a asp-action="answer" asp-route-id="@item.Id">Answer</a> |
+                                @if (item.EmailSended == false && item.AnswerDate != null)
+                                {
+                                    <a style="cursor: pointer;" id="submit" class="btn btn-primary">Emaili Gonder</a>
+                                    <span style="display:none" id="commentId">@item.Id</span>
+                                }
+                                <a onclick="removeEntity(event, @item.Id, '@item.Name')" class="btn">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section js {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var submit = document.getElementById("submit")
+        submit.addEventListener("click", function (e) {
+            e.preventDefault()
+            var id = document.getElementById("commentId").innerHTML;
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value
+            var comment = document.getElementById("comment").value
+            var answer = document.getElementById("answer").value;
+
+            $.ajax({
+                url: "/admin/Contact/Subscribe",
+                data: {
+                    id: id,
+                    name: name,
+                    email: email,
+                    comment: comment,
+                    answer: answer
+                },
+                dataType: "json",
+                type: "post",
+                success: function (data) {
+                    if (data.status == 200) {
+                        location.reload(true)
+                    }
+                }
+
+            })
+        })
+
+    </script>
+}

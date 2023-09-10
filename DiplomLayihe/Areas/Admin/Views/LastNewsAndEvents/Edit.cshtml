@@ -1,0 +1,91 @@
+﻿@model LastNewsAndEventsEditCommand
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+@section css {
+    <style>
+        .ck-content {
+            min-height: 250px;
+        }
+
+        .photo-viewer {
+            width: 200px;
+            height: 100px;
+            background-position: center;
+            background-size: cover;
+            object-fit: cover;
+            background-image: url('/photouploads/images/file-uploads1.jpg');
+            cursor: pointer;
+        }
+
+        #file {
+            display: none;
+        }
+    </style>
+}
+
+
+<h1>Edit</h1>
+
+<h4>Last News And Events</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <label for="file1" class="control-label">Sekil</label>
+            <div class="form-group">
+                <label class="photo-viewer control-label" id="file-viewer" for="file" style="background-image: url(/photouploads/images/@Model.EventPhoto);"></label>
+                <input name="file" id="file" type="file" class="form-control" onchange="readFile(this)" />
+                <input type="hidden" asp-for="EventPhoto" />
+                <span asp-validation-for="EventPhoto" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MainText" class="control-label"></label>
+                <input asp-for="MainText" class="form-control" />
+                <span asp-validation-for="MainText" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Explanation" class="control-label"></label>
+                <input asp-for="Explanation" class="form-control" />
+                <span asp-validation-for="Explanation" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+
+@section js {
+
+    <script>
+        $(document).ready(function () {
+
+            $('#tags').val([@string.Join(",",Model.EventTagCloud.Select(tc=>tc.PostTagId))]);
+
+        });
+
+    </script>
+}

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<EventGallery>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Event Gallery</h1>
+<p>
+    <a class="createbtn" asp-action="Create" style="color: white;">
+        Create
+    </a>
+</p>
+
+@section css {
+    <style>
+        .image {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Gallery Photo</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr data-entity-id="@item.Id">
+                            <td>
+                                <img class="image" src="~/photouploads/images/@item.GalleryPhoto" />
+                            </td>
+                            <td class="atributlar">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="editbtn">Edit</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id" class="detailbtn">Details</a> |
+                                <a onclick="removeEntity(event, @item.Id, '@item.GalleryPhoto')" class="deletebtn">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

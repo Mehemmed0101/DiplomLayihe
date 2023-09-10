@@ -1,0 +1,32 @@
+@media only screen and (max-width: 1000px) {
+  header .headertopbar {
+    width: 100%;
+    line-height: normal;
+  }
+  header .headertopbar .number {
+    display: none;
+  }
+  header .headertopbar .contact {
+    display: none;
+  }
+  header .headernavigation .navigationrow {
+    display: none;
+  }
+  header .headernavigation .responsivenavbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media only screen and (max-width: 1200px) {
+    .headertopbar .number {
+        display: none;
+    }
+}
+/*# sourceMappingURL=headerandfootermedia.css.map */
